@@ -1,6 +1,92 @@
 /*------------------------------------------------------------------
 [ accordion ]*/
 
-.accordion {
-    position: relative;
+.accordion-faq {
+    --bs-accordion-color: #F0DDD8;
+    --bs-accordion-bg: #221E2B;
+    --bs-accordion-btn-padding-x: 0;
+    --bs-accordion-btn-padding-y: 0;
+    --bs-accordion-btn-color: #fff;
+    --bs-accordion-btn-bg: #221E2B;
+    --bs-accordion-btn-icon-transform: rotate(180deg);
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-body-padding-x: 0;
+    --bs-accordion-body-padding-y: 0;
+    --bs-accordion-active-color: #fff;
+    --bs-accordion-active-bg: #221E2B;
+    --theme-accordion-divider: 10px;
+
+    .accordion-item {
+        overflow: hidden;
+        padding: 28px;
+        border: none !important;
+        border-radius: var(--bs-border-radius-lg) !important;
+        background: radial-gradient(96.58% 88.3% at 2.23% 7.45%, rgba(59, 39, 69, 0.4) 0%, rgba(35, 30, 44, 0.4) 100%);
+    
+        &:not(:last-of-type) {
+            margin-bottom: 12px;
+        }
+    }
+
+    .accordion-button {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        gap: 15px;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        background: transparent;
+
+        &::after {
+            content: none;
+        }
+
+        .accordion-icon {
+            flex-shrink: 0;
+            margin-left: auto;
+    
+            svg {
+                transition: var(--bs-accordion-btn-icon-transition);
+            }
+        }
+        
+        &:not(.collapsed) {
+
+            .accordion-icon svg {
+                transform: var(--bs-accordion-btn-icon-transform);
+            }
+        }
+    }
+    
+    .accordion-body {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.3;
+    
+        p:last-child {
+            margin-bottom: 0;
+        }
+    
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: var(--theme-accordion-divider);
+        }
+    }
+    
+    @include media-breakpoint-up(lg) {
+        --theme-accordion-divider: 10px;
+    
+        .accordion-button {
+            font-size: 24px;
+        }
+
+        .accordion-body {
+            font-size: 18px;
+        }
+    }
 }
+

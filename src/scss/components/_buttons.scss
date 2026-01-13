@@ -67,19 +67,28 @@
     --bs-btn-disabled-border-color: #291238;
 }
 
-.btn-yellow-gradient {
+.btn-gold-gradient {
     --bs-btn-color: #040308;
-    --bs-btn-bg: linear-gradient(0deg, #E9C4B4, #E9C4B4), linear-gradient(270deg, #EDD1A2 0%, #F1B980 100%);
+    --bs-btn-bg: #E3C5B6;
     --bs-btn-border-color: #E3C5B6;
     --bs-btn-hover-color: #040308;
-    --bs-btn-hover-bg: linear-gradient(270deg, #EABA64 0%, #F8AE60 100%);
-    --bs-btn-hover-border-color: #E3C5B6;
+    --bs-btn-hover-bg: #F8AE60;
+    --bs-btn-hover-border-color: #F8AE60;
     --bs-btn-active-color: #040308;
-    --bs-btn-active-bg: linear-gradient(270deg, #EABA64 0%, #F8AE60 100%);
-    --bs-btn-active-border-color: #E3C5B6;
+    --bs-btn-active-bg: #F8AE60;
+    --bs-btn-active-border-color: #F8AE60;
     --bs-btn-disabled-color: #040308;
-    --bs-btn-disabled-bg: linear-gradient(270deg, #EABA64 0%, #F8AE60 100%);
-    --bs-btn-disabled-border-color: #E3C5B6;
+    --bs-btn-disabled-bg: #F8AE60;
+    --bs-btn-disabled-border-color: #F8AE60;
+    background: linear-gradient(270deg, #EDD1A2 0%, #F1B980 100%);
+
+    &:hover {
+        background: linear-gradient(270deg, #EABA64 0%, #F8AE60 100%);
+    }
+
+    &:active {
+        background: linear-gradient(270deg, #C9983F 0%, #DE913C 100%);
+    }
 }
 
 @include media-breakpoint-up(lg) {
