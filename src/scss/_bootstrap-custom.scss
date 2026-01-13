@@ -9,37 +9,33 @@
 // === Custom Variables ===
 
 // colors
-$primary: #4251F7;
-$secondary: #F74251;
-$white: #F8FEFF;
-$black: #100102;
-$success: #006311;
+$primary: #412752;
+$secondary: #E3C5B6;
 
 // fonts
 $font-family-sans-serif: "Bounded", sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$line-height-base: 1.4;
+$line-height-base: 1.3;
 
 // grid system
 $grid-columns: 24;
 $grid-gutter-width: 2.5rem;
 
 // body settings
-$body-color: #6A6367;
-$body-bg: #ECECEC;
+$body-color: #F0DDD8;
+$body-bg: #040308;
 
 // borders
 $border-width: 1px;
-$border-color: #E4E4E5;
+$border-color: #E8D2A8;
 $border-radius: 16px;
 $border-radius-sm: 8px;
 $border-radius-lg: 20px;
 $border-radius-xl: 22px;
 $border-radius-2xl: 24px;
-$border-radius-pill: 50px;
 
 // links
-$link-color: #100102;
-$link-hover-color: #4251F7;
+$link-color: #412752;
+$link-hover-color: #311940;
 
 // breakpoints
 $grid-breakpoints: (

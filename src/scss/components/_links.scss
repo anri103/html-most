@@ -5,25 +5,10 @@ a {
     text-decoration: none;
 }
 
-.link-white {
-    --bs-link-color-rgb: var(--theme-white-rgb);
-    --bs-link-hover-color-rgb: var(--theme-white-60-rgb);
-}
-
-.link-black {
-    --bs-link-color-rgb: var(--theme-black-rgb);
-    --bs-link-hover-color-rgb: var(--theme-blue-rgb);
-}
-
-.link-blue {
-    --bs-link-color-rgb: var(--theme-blue-rgb);
-    --bs-link-hover-color-rgb: var(--theme-black-rgb);
-}
-
-.link-blue-60 {
-    --bs-link-color-rgb: var(--theme-blue-60-rgb);
-    --bs-link-hover-color-rgb: var(--theme-blue-rgb);
-}
+// .link-white {
+//     --bs-link-color-rgb: var(--theme-white-rgb);
+//     --bs-link-hover-color-rgb: var(--theme-white-60-rgb);
+// }
 
 .stretched-link::after {
     content: "";
