@@ -1,0 +1,151 @@
+/*------------------------------------------------------------------
+[ header ]*/
+
+.header {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    z-index: 920;
+
+    &.js-fixed {
+        top: 10px;
+
+        .header-row {
+            border-color: var(--bs-body-bg);
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+body.header-absolute {
+    .header {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        // z-index: 100;
+        transition: all 0.3s ease;
+
+        @include media-breakpoint-up(lg) {
+            top: 20px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            top: 30px;
+        }
+    }
+}
+
+body.header-fixed {
+    .header {
+        position: fixed;
+        top: 20px;
+        left: 0;
+        right: 0;
+        // z-index: 100;
+        transition: all 0.3s ease;
+    }
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        img {
+            width: auto;
+            height: 50px;
+            object-fit: contain;
+        }
+    }
+
+    &__phone-link {
+        color: #F0DDD8;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: 0.02em;
+    }
+
+    &__phone-link:hover {
+        opacity: 0.7;
+    }
+
+    // Максимальная ширина
+
+    @include media-breakpoint-down(lg) {
+        &__navigation {
+            display: none;
+        }
+    }
+
+    // Минимальная ширина
+
+    @include media-breakpoint-up(lg) {
+        .btn-mobile-toggler {
+            display: none;
+        }
+    }
+}
+
+/* primary-nav */
+
+.primary-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    .nav-item {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+
+        > a {
+            position: relative;
+            display: block;
+            padding: 0 12px;
+            color: #F0DDD8;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: 0.02em;
+        }
+
+        > a:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+/* mobile-nav */
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    
+    a {
+        display: block;
+        color: #F0DDD8;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: 0.02em;
+    }
+}

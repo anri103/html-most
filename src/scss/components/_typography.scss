@@ -1,0 +1,81 @@
+/*------------------------------------------------------------------
+[ typography ]*/
+
+.ff-title { font-family: var(--theme-ff-title); }
+
+// Headings
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: var(--theme-black);
+    font-family: var(--theme-ff-title);
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+}
+h1,
+.h1 { font-size: var(--fs-h1); }
+h2,
+.h2 { font-size: var(--fs-h2); }
+h3,
+.h3 { font-size: var(--fs-h3); }
+h4,
+.h4 { font-size: var(--fs-h4); }
+h5,
+.h5 { font-size: var(--fs-h5); }
+h6,
+.h6 { font-size: var(--fs-h6); }
+
+// Font Size
+
+.fs-body { font-size: var(--bs-body-font-size); }
+.fs-1 { font-size: var(--fs-h1) !important; }
+.fs-2 { font-size: var(--fs-h2) !important; }
+.fs-3 { font-size: var(--fs-h3) !important; }
+.fs-4 { font-size: var(--fs-h4) !important; }
+.fs-5 { font-size: var(--fs-h5) !important; }
+.fs-6 { font-size: var(--fs-h6) !important; }
+.fs-small { font-size: var(--fs-small); }
+.fs-x-small { font-size: var(--fs-x-small); }
+.fs-14 { font-size: 14px; }
+.fs-16 { font-size: 16px; }
+.fs-22 { font-size: 22px; }
+.fs-80 { font-size: 80px; }
+
+// text color
+
+.text-white-60 {
+    --bs-text-opacity: 1;
+    color: rgba(var(--theme-white-60-rgb), var(--bs-text-opacity)) !important;
+}
+.text-black-60 {
+    --bs-text-opacity: 1;
+    color: rgba(var(--theme-black-60-rgb), var(--bs-text-opacity)) !important;
+}
+
+// text opacity
+
+.text-opacity-20 { --bs-text-opacity: 0.2; }
+.text-opacity-60 { --bs-text-opacity: 0.6; }
+.text-opacity-80 { --bs-text-opacity: 0.8; }
+
+// line-height
+
+.lh-body { line-height: var(--bs-body-line-height) !important; }
+
+// paragraph
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.text-box p:last-of-type { margin-bottom: 0; }

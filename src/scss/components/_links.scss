@@ -1,0 +1,36 @@
+/*------------------------------------------------------------------
+[ links ]*/
+
+a {
+    text-decoration: none;
+}
+
+.link-white {
+    --bs-link-color-rgb: var(--theme-white-rgb);
+    --bs-link-hover-color-rgb: var(--theme-white-60-rgb);
+}
+
+.link-black {
+    --bs-link-color-rgb: var(--theme-black-rgb);
+    --bs-link-hover-color-rgb: var(--theme-blue-rgb);
+}
+
+.link-blue {
+    --bs-link-color-rgb: var(--theme-blue-rgb);
+    --bs-link-hover-color-rgb: var(--theme-black-rgb);
+}
+
+.link-blue-60 {
+    --bs-link-color-rgb: var(--theme-blue-60-rgb);
+    --bs-link-hover-color-rgb: var(--theme-blue-rgb);
+}
+
+.stretched-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}

@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------
+[ forms ]*/
+
+.form-control {
+    color: var(--theme-black);
+    box-shadow: none !important;
+
+    &:focus {
+        color: var(--theme-black);
+        border-color: var(--theme-black-60);
+    }
+}
+
+.input-m {
+    min-height: 50px;
+    padding: 10px 16px;
+}
+
+.input-l {
+    min-height: 58px;
+    padding: 12px 20px;
+}
+
+@include media-breakpoint-up(xxl) {
+    .input-m {
+        min-height: 66px;
+    }
+
+    .input-l {
+        min-height: 66px;
+    }
+}

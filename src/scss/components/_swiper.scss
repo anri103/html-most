@@ -1,0 +1,70 @@
+/*------------------------------------------------------------------
+[ swiper ]*/
+
+.swiper {
+    .pagination-static {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        // padding: 0 50px;
+
+        // &::before,
+        // &::after {
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     top: 50%;
+        //     transform: translateY(-50%);
+        //     width: 50px;
+        //     height: 50px;
+        //     background-position: center;
+        //     background-repeat: no-repeat;
+        //     background-size: auto;
+        // }
+        
+        // &::before {
+        //     left: 0;
+        //     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M10.8931 0.159264C10.736 -0.0346469 10.4634 -0.0541935 10.2839 0.115512L3.37208 6.64908L3 7L3.37208 7.35092L10.2839 13.8845C10.4634 14.0542 10.736 14.0346 10.8931 13.8407C11.0502 13.6468 11.0321 13.3524 10.8526 13.1826L4.312 7L10.8526 0.81736C11.0321 0.647626 11.0502 0.353213 10.8931 0.159264Z' fill='%23100102'/%3E%3C/svg%3E");
+        // }
+
+        // &::after {
+        //     right: 0;
+        //     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M3.10692 0.159264C3.26404 -0.0346469 3.53657 -0.0541935 3.7161 0.115512L10.6279 6.64908L11 7L10.6279 7.35092L3.7161 13.8845C3.53657 14.0542 3.26404 14.0346 3.10692 13.8407C2.94984 13.6468 2.96793 13.3524 3.14742 13.1826L9.688 7L3.14742 0.81736C2.96793 0.647626 2.94984 0.353213 3.10692 0.159264Z' fill='%23100102'/%3E%3C/svg%3E");
+        // }
+    }
+
+    // @include media-breakpoint-up(xl) {
+    //     .pagination-static {
+    //         padding: 0;
+            
+    //         &::before,
+    //         &::after {
+    //             display: none;
+    //         }
+    //     }
+    // }
+}
+
+/* teamSwiper */
+
+.teamSwiper {
+    .swiper-slide {
+        width: auto;
+    }
+
+    .swiper-img {
+        max-width: 300px;
+        height: auto;
+        border-radius: var(--bs-border-radius-lg);
+        // object-fit: cover;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .swiper-img {
+            max-width: 100%;
+        }
+    }
+}

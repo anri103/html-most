@@ -1,0 +1,81 @@
+/*------------------------------------------------------------------
+[ buttons ]*/
+
+.btn {
+    --bs-btn-font-size: 16px;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1;
+    --bs-btn-disabled-opacity: 0.25;
+    --bs-btn-focus-box-shadow: none;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    svg {
+        flex-shrink: 0;
+    }
+}
+
+.btn-m {
+    --bs-btn-padding-x: 16px;
+    --bs-btn-padding-y: 0;
+    min-height: 50px;
+}
+
+.btn-icon-m {
+    --bs-btn-padding-x: 0;
+    --bs-btn-padding-y: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-l {
+    --bs-btn-padding-x: 20px;
+    --bs-btn-padding-y: 0;
+    min-height: 58px;
+}
+
+.btn-icon-l {
+    --bs-btn-padding-x: 0;
+    --bs-btn-padding-y: 0;
+    width: 58px;
+    height: 58px;
+}
+
+// .btn-mobile-toggler {
+//     --bs-btn-padding-x: 14px;
+//     --bs-btn-padding-y: 12px;
+// }
+
+.btn-primary {
+    --bs-btn-color: var(--theme-white);
+    --bs-btn-bg: var(--theme-blue);
+    --bs-btn-border-color: var(--theme-blue);
+    --bs-btn-hover-color: var(--theme-white);
+    --bs-btn-hover-bg: var(--theme-black);
+    --bs-btn-hover-border-color: var(--theme-black);
+    --bs-btn-active-color: var(--theme-white);
+    --bs-btn-active-bg: var(--theme-black);
+    --bs-btn-active-border-color: var(--theme-black);
+    --bs-btn-disabled-color: var(--theme-white);
+    --bs-btn-disabled-bg: var(--theme-black);
+    --bs-btn-disabled-border-color: var(--theme-black);
+}
+
+.btn-secondary {
+    --bs-btn-color: var(--theme-white);
+    --bs-btn-bg: var(--theme-red);
+    --bs-btn-border-color: var(--theme-red);
+    --bs-btn-hover-color: var(--theme-white);
+    --bs-btn-hover-bg: var(--theme-black);
+    --bs-btn-hover-border-color: var(--theme-black);
+    --bs-btn-active-color: var(--theme-white);
+    --bs-btn-active-bg: var(--theme-black);
+    --bs-btn-active-border-color: var(--theme-black);
+    --bs-btn-disabled-color: var(--theme-white);
+    --bs-btn-disabled-bg: var(--theme-black);
+    --bs-btn-disabled-border-color: var(--theme-black);
+}

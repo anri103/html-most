@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+[ breadcrumb ]*/
+
+.breadcrumb {
+    --bs-breadcrumb-font-size: var(--fs-x-small);
+    --bs-breadcrumb-margin-bottom: 10px;
+
+    // @include media-breakpoint-up(xl) {
+    //     --bs-breadcrumb-font-size: var(--fs-small);
+    // }
+}
+
+.breadcrumb-white {
+    --bs-link-color-rgb: var(--theme-white-rgb);
+    --bs-breadcrumb-divider-color: var(--theme-white);
+    --bs-breadcrumb-item-active-color: var(--theme-white);
+}

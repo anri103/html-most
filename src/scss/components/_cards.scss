@@ -1,0 +1,124 @@
+/*------------------------------------------------------------------
+[ cards ]*/
+
+/* card-devcycle */
+
+.card-devcycle {
+    --bs-card-spacer-y: 20px;
+    --bs-card-spacer-x: 15px;
+    --bs-card-border-width: 0;
+    --bs-card-border-color: transparent;
+    --bs-card-border-radius: var(--bs-border-radius-lg);
+    --bs-card-bg: var(--theme-white);
+    position: relative;
+    overflow: hidden;
+    min-height: 460px;
+    transition: 0.3s ease;
+
+    .bg-absolute-img {
+        position: absolute;
+        bottom: -20%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        max-width: 120%;
+        height: auto;
+    }
+
+    .card-layer-default {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transition: 0.3s ease;
+    }
+
+    .card-layer-hidden {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-width: 0;
+        transform: translateY(100%);
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+
+    &:hover {
+        .card-layer-default {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        .card-layer-hidden {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+    // Максимальная ширина
+
+    @include media-breakpoint-down(xl) {
+        .card-layer-default {
+            display: none;
+        }
+
+        .card-layer-hidden {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    // Минимальная ширина
+
+    @include media-breakpoint-up(xl) {
+        --bs-card-spacer-y: 30px;
+        --bs-card-spacer-x: 30px;
+        min-height: 580px;
+
+        .bg-absolute-img {
+            bottom: -30%;
+            max-width: 120%;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        --bs-card-spacer-y: 40px;
+        --bs-card-spacer-x: 40px;
+        min-height: 600px;
+    }
+}
+
+/* card-stage */
+
+.card-stage {
+    --bs-card-spacer-y: 20px;
+    --bs-card-spacer-x: 15px;
+    --bs-card-border-radius: var(--bs-border-radius-lg);
+    --bs-card-border-color: transparent;
+    --bs-card-bg: var(--theme-white);
+    position: relative;
+    overflow: hidden;
+
+    .bg-absolute-img {
+        position: absolute;
+        bottom: -70%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        max-width: 120%;
+        height: auto;
+    }
+
+    @include media-breakpoint-up(xl) {
+        --bs-card-spacer-y: 30px;
+        --bs-card-spacer-x: 30px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        --bs-card-spacer-y: 40px;
+        --bs-card-spacer-x: 40px;
+    }
+}

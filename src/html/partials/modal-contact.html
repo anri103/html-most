@@ -1,0 +1,96 @@
+<div class="offcanvas offcanvas-contact" tabindex="-1" id="offcanvasContact">
+    <div class="offcanvas-body">
+        <!-- header -->
+        <div class="d-flex align-items-center justify-content-between mb-20">
+            <img class="img-fluid" src="img/logo/logo.svg" alt="AMD Media" width="167" height="40">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- body -->
+        <div class="d-grid grid-cols-1 gap-30">
+            <!-- form -->
+            <div>
+                <div class="h5 fw-medium mb-30">Оставьте имя и номер — свяжемся, чтобы понять задачу и предложить подходящее решение</div>
+                <!-- form -->
+                <form action="#">
+                    <div class="d-grid grid-cols-2 gap-20 gap-md-10">
+                        <div class="col-span-2 col-span-sm-1">
+                            <input type="text" class="form-control input-l" placeholder="Ваше имя">
+                        </div>
+                        <div class="col-span-2 col-span-sm-1">
+                            <input type="text" class="form-control input-l maskPhone" placeholder="+7 (___) ___-__-__">
+                        </div>
+                        <div class="col-span-2 mt-20 mb-20">
+                            <img class="img-fluid" src="img/footer/captcha.jpg" alt="">
+                        </div>
+                        <div class="col-span-2">
+                            <a href="#modalSuccess" class="btn btn-primary btn-l btn-animated w-100" data-bs-toggle="modal" data-bs-dismiss="offcanvas" onclick="closeOffcanvas()">
+                                <div class="animated-content">
+                                    <div class="animated-content__default">
+                                        <span>Отправить</span>
+                                    </div>
+                                    <div class="animated-content__hidden">
+                                        <span>Отправить</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-span-2 mt-10">
+                            <div class="form-check max-w-500">
+                                <input type="checkbox" class="form-check-input" id="contactCheck">
+                                <label class="form-check-label fs-x-small" for="contactCheck">Я даю своё согласие на&nbsp;обработку персональных данных и&nbsp;соглашаюсь с&nbsp;политикой конфиденциальности</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- socials -->
+            <div>
+                <div class="h5 fw-medium mb-10">Или свяжитесь с нами напрямую:</div>
+                <div class="d-flex flex-wrap gap-10">
+                    <a href="mailto:support@amdmedia.ru" class="btn btn-outline-black px-4" style="height: 50px;">
+                        <span class="fs-16">support@amdmedia.ru</span>
+                    </a>
+                    <div class="d-flex flex-wrap gap-10">
+                        <!-- telegram -->
+                        <a href="#" class="link-social">
+                            <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#039BE5"></path>
+                                <path d="M9.15162 19.566L28.435 12.131C29.33 11.8077 30.1116 12.3494 29.8216 13.7027L29.8233 13.701L26.5399 29.1694C26.2966 30.266 25.6449 30.5327 24.7333 30.016L19.7333 26.331L17.3216 28.6544C17.0549 28.921 16.8299 29.146 16.3133 29.146L16.6683 24.0577L25.9349 15.686C26.3383 15.331 25.8449 15.131 25.3133 15.4844L13.8616 22.6944L8.92495 21.1544C7.85328 20.8144 7.82995 20.0827 9.15162 19.566Z" fill="white"></path>
+                            </svg>
+                        </a>
+                        <!-- whatsapp -->
+                        <a href="#" class="link-social">
+                            <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#29A71A"></path>
+                                <path d="M13.1347 10.3934C15.4034 8.75513 18.183 7.98126 20.9719 8.21176C23.7608 8.44231 26.3754 9.66206 28.3443 11.6506C30.2969 13.6263 31.4852 16.2306 31.6978 19.0002C31.9104 21.7697 31.1332 24.5251 29.5051 26.7756C27.8771 29.026 25.5034 30.6259 22.8066 31.2905C20.1096 31.9552 17.264 31.6414 14.7766 30.4051L14.5605 30.2977L8.34497 31.7704L9.60278 25.6636L9.65031 25.4351L9.54419 25.2274C8.27575 22.733 7.94065 19.8672 8.59888 17.1473C9.25719 14.4274 10.8659 12.0318 13.1347 10.3934ZM19.9999 9.52361C17.2481 9.52365 14.6088 10.6171 12.6627 12.5627C11.1139 14.1117 10.0948 16.1114 9.75187 18.2749C9.40914 20.4378 9.75991 22.6534 10.7532 24.605L11.0748 25.2411L10.3293 28.8648L10.3196 28.9045L10.0689 29.9572L14.7258 28.8537L15.384 29.1792C17.3289 30.1466 19.5284 30.4795 21.6724 30.131C23.817 29.7825 25.798 28.7694 27.3365 27.2352L27.3372 27.2346C29.2734 25.298 30.3656 22.6748 30.3756 19.9364C30.3856 17.1979 29.3126 14.5667 27.3905 12.6161L27.373 12.5978L27.3619 12.5881L27.3534 12.5783L27.3372 12.5627L27.1529 12.3823C25.2262 10.5494 22.6658 9.52361 19.9999 9.52361Z" fill="white"></path>
+                                <path d="M26.5249 23.9289C26.0545 24.6698 25.3113 25.5766 24.3772 25.8016C22.7408 26.197 20.2295 25.8152 17.1045 22.9016L17.0658 22.8675C14.3181 20.3198 13.6045 18.1993 13.7772 16.5175C13.8727 15.5629 14.6681 14.6993 15.3386 14.1357C15.4446 14.0452 15.5703 13.9808 15.7056 13.9476C15.8409 13.9144 15.9822 13.9133 16.118 13.9445C16.2538 13.9756 16.3805 14.0381 16.4879 14.1269C16.5952 14.2158 16.6803 14.3285 16.7363 14.4561L17.7477 16.7289C17.8134 16.8762 17.8377 17.0387 17.8181 17.1989C17.7985 17.359 17.7356 17.5108 17.6363 17.6379L17.1249 18.3016C17.0152 18.4386 16.949 18.6053 16.9348 18.7803C16.9206 18.9553 16.9592 19.1305 17.0454 19.2834C17.3317 19.7857 18.0181 20.5243 18.7795 21.2084C19.634 21.9811 20.5817 22.6879 21.1817 22.9289C21.3423 22.9944 21.5188 23.0105 21.6885 22.9748C21.8583 22.9392 22.0134 22.8535 22.134 22.7289L22.7272 22.1311C22.8417 22.0183 22.984 21.9378 23.1397 21.8978C23.2954 21.8579 23.4589 21.86 23.6136 21.9039L26.0158 22.5857C26.1484 22.6263 26.2698 22.6967 26.3709 22.7915C26.4721 22.8863 26.5502 23.003 26.5993 23.1326C26.6484 23.2622 26.6673 23.4013 26.6544 23.5393C26.6415 23.6774 26.5972 23.8106 26.5249 23.9289Z" fill="white"></path>
+                            </svg>
+                        </a>
+                        <!-- vk -->
+                        <a href="#" class="link-social">
+                            <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.198242 19.2C0.198242 10.149 0.198242 5.62356 2.98218 2.81178C5.76612 0 10.2468 0 19.2081 0H20.7923C29.7536 0 34.2343 0 37.0183 2.81178C39.8022 5.62356 39.8022 10.149 39.8022 19.2V20.8C39.8022 29.851 39.8022 34.3764 37.0183 37.1882C34.2343 40 29.7536 40 20.7923 40H19.2081C10.2468 40 5.76612 40 2.98218 37.1882C0.198242 34.3764 0.198242 29.851 0.198242 20.8V19.2Z" fill="#0077FF"></path>
+                                <path d="M21.2708 28.817C12.2444 28.817 7.09588 22.567 6.88135 12.167H11.4028C11.5513 19.8003 14.8846 23.0336 17.5248 23.7003V12.167H21.7824V18.7503C24.3897 18.467 27.1286 15.467 28.0527 12.167H32.3103C31.6007 16.2337 28.6304 19.2336 26.5182 20.467C28.6304 21.467 32.0134 24.0836 33.3005 28.817H28.6139C27.6073 25.6503 25.0992 23.2003 21.7824 22.867V28.817H21.2708Z" fill="white"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- links -->
+            <div class="d-flex flex-column gap-10">
+                <a href="tel:+74951595901" class="fs-5 fw-medium link-blue">
+                    <svg width="30" height="30">
+                        <use xlink:href="img/sprite.svg#icon-phone-bold"/>
+                    </svg>
+                    +7 495 159-59-01
+                </a>
+                <a href="https://yandex.ru/maps/-/CLsEy203" class="fs-5 fw-medium link-blue" target="_blank">
+                    <svg width="30" height="30">
+                        <use xlink:href="img/sprite.svg#icon-geo"/>
+                    </svg>
+                    117638 Россия, Москва, Одесская улица 2кС
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
