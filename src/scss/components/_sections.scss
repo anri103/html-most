@@ -138,7 +138,6 @@
 .section-about {
     padding: 40px 0;
     background: 
-    /* Первый слой - градиент */
     radial-gradient(
       257.31% 107.18% at 50% -14.35%,
       #2C2837 17.61%,
@@ -146,7 +145,6 @@
       rgba(4, 3, 8, 0.6) 63.46%,
       rgba(4, 3, 8, 0.4) 100%
     ),
-    /* Второй слой - сплошной цвет (должен идти ПОСЛЕ) */
     #040308;
 
     &__header {
@@ -155,6 +153,25 @@
 
     @include media-breakpoint-up(lg) {
         padding: 60px 0 90px;
+
+        &__header {
+            margin-bottom: 80px;
+        }
+    }
+}
+
+/* section-categories */
+
+.section-categories {
+    padding: 40px 0;
+    background: #040308;
+
+    &__header {
+        margin-bottom: 24px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 80px 0;
 
         &__header {
             margin-bottom: 80px;
