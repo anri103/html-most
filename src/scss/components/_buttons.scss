@@ -2,17 +2,19 @@
 [ buttons ]*/
 
 .btn {
-    --bs-btn-font-size: 16px;
+    --bs-btn-font-size: 14px;
     --bs-btn-font-weight: 400;
     --bs-btn-line-height: 1;
     --bs-btn-disabled-opacity: 0.25;
     --bs-btn-focus-box-shadow: none;
+    --bs-btn-border-radius: 50rem;
     position: relative;
     overflow: hidden;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    letter-spacing: 0.02em;
 
     svg {
         flex-shrink: 0;
@@ -33,9 +35,9 @@
 }
 
 .btn-l {
-    --bs-btn-padding-x: 20px;
+    --bs-btn-padding-x: 40px;
     --bs-btn-padding-y: 0;
-    min-height: 58px;
+    min-height: 48px;
 }
 
 .btn-icon-l {
@@ -51,18 +53,18 @@
 // }
 
 .btn-primary {
-    --bs-btn-color: var(--theme-white);
-    --bs-btn-bg: var(--theme-blue);
-    --bs-btn-border-color: var(--theme-blue);
-    --bs-btn-hover-color: var(--theme-white);
-    --bs-btn-hover-bg: var(--theme-black);
-    --bs-btn-hover-border-color: var(--theme-black);
-    --bs-btn-active-color: var(--theme-white);
-    --bs-btn-active-bg: var(--theme-black);
-    --bs-btn-active-border-color: var(--theme-black);
-    --bs-btn-disabled-color: var(--theme-white);
-    --bs-btn-disabled-bg: var(--theme-black);
-    --bs-btn-disabled-border-color: var(--theme-black);
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #412752;
+    --bs-btn-border-color: #412752;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #311940;
+    --bs-btn-hover-border-color: #311940;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #291238;
+    --bs-btn-active-border-color: #291238;
+    --bs-btn-disabled-color: #d6d6d6;
+    --bs-btn-disabled-bg: #291238;
+    --bs-btn-disabled-border-color: #291238;
 }
 
 .btn-secondary {
@@ -78,4 +80,16 @@
     --bs-btn-disabled-color: var(--theme-white);
     --bs-btn-disabled-bg: var(--theme-black);
     --bs-btn-disabled-border-color: var(--theme-black);
+}
+
+@include media-breakpoint-up(lg) {
+    .btn {
+        --bs-btn-font-size: 24px;
+    }
+
+    .btn-l {
+        --bs-btn-padding-x: 70px;
+        --bs-btn-padding-y: 0;
+        min-height: 70px;
+    }
 }
