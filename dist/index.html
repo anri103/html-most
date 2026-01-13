@@ -49,10 +49,11 @@
                 </nav>
 
                 <!-- phone -->
-                <a href="tel:88007001212" class="header-row__phone-link">8 800 700 1212</a>
+                <a href="tel:88007001212" class="header-row__phone-link hide-on-mobile">8 800 700 1212</a>
 
                 <!-- mobile-toggler -->
-                <button type="button" class="btn border-0 p-1 btn-mobile-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobilemenu">
+                <!-- data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobilemenu" -->
+                <button type="button" class="btn border-0 p-1 btn-mobile-toggler">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M4.25 7C4.0375 7 3.85942 6.92808 3.71575 6.78425C3.57192 6.64041 3.5 6.46225 3.5 6.24975C3.5 6.03708 3.57192 5.859 3.71575 5.7155C3.85942 5.57183 4.0375 5.5 4.25 5.5H19.75C19.9625 5.5 20.1406 5.57191 20.2843 5.71575C20.4281 5.85958 20.5 6.03775 20.5 6.25025C20.5 6.46291 20.4281 6.641 20.2843 6.7845C20.1406 6.92816 19.9625 7 19.75 7H4.25ZM4.25 18.5C4.0375 18.5 3.85942 18.4281 3.71575 18.2842C3.57192 18.1404 3.5 17.9622 3.5 17.7497C3.5 17.5371 3.57192 17.359 3.71575 17.2155C3.85942 17.0718 4.0375 17 4.25 17H19.75C19.9625 17 20.1406 17.0719 20.2843 17.2157C20.4281 17.3596 20.5 17.5377 20.5 17.7502C20.5 17.9629 20.4281 18.141 20.2843 18.2845C20.1406 18.4282 19.9625 18.5 19.75 18.5H4.25ZM4.25 12.75C4.0375 12.75 3.85942 12.6781 3.71575 12.5342C3.57192 12.3904 3.5 12.2122 3.5 11.9997C3.5 11.7871 3.57192 11.609 3.71575 11.4655C3.85942 11.3218 4.0375 11.25 4.25 11.25H19.75C19.9625 11.25 20.1406 11.3219 20.2843 11.4657C20.4281 11.6096 20.5 11.7877 20.5 12.0002C20.5 12.2129 20.4281 12.391 20.2843 12.5345C20.1406 12.6782 19.9625 12.75 19.75 12.75H4.25Z" fill="#E3C5B6"/>
                     </svg>
@@ -135,21 +136,24 @@
 
     <!-- section-home-hero -->
     <section class="section section-home-hero">
+        <img class="bg-absolute-img" src="img/home/hero-bg-01.svg" alt="">
+        <div class="bg-overlay"></div>
+        <!-- content -->
         <div class="container">
-            <img class="bg-absolute-img" src="img/home/hero-bg-01.svg" alt="">
-            <div class="bg-overlay"></div>
             <div class="position-relative">
                 <div class="row">
                     <div class="col-lg-10">
-                        <img class="img-fluid" src="img/home/hero-01.png" alt="">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img class="section-home-hero__img img-fluid" src="img/home/hero-01.png" alt="">
+                        </div>
                     </div>
                     <div class="col-lg-13 order-lg-first">
                         <h1 class="section-home-hero__title">Создаем мобильные приложения нового уровня</h1>
-                        <div class="section-home-hero__subtitle">Полный цикл: от идеи до поддержки и развития<br>Единый код для всех платформ — экономия вашего бюджета и времени</div>
+                        <div class="section-home-hero__subtitle">Полный цикл: от идеи до поддержки и&nbsp;развития.<br>Единый код для всех платформ — экономия вашего бюджета и времени</div>
                         <div class="section-home-hero__btn-wrapper">
                             <a href="#" class="btn btn-primary btn-l w-100 w-lg-auto">Обсудить проект</a>
                         </div>
-                        <div class="section-home-hero__tags">
+                        <div class="section-home-hero__tags hide-on-mobile">
                             <span>#теги</span>
                             <span>#кроссплатформенность</span>
                             <span>#mobilapp</span>

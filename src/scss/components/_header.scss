@@ -66,7 +66,7 @@ body.header-fixed {
     &__logo {
         img {
             width: auto;
-            height: 50px;
+            height: 35px;
             object-fit: contain;
         }
     }
@@ -94,6 +94,12 @@ body.header-fixed {
     // Минимальная ширина
 
     @include media-breakpoint-up(lg) {
+        &__logo {
+            img {
+                height: 50px;
+            }
+        }
+
         .btn-mobile-toggler {
             display: none;
         }
