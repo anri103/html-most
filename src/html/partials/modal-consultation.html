@@ -1,0 +1,51 @@
+<div class="modal modal-consultation fade" id="modalConsultation" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- modal-body -->
+            <div class="modal-body">
+
+                <!-- btn-close -->
+                <div class="d-flex justify-content-end mb-10">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- header -->
+                <div class="text-center mb-20 mb-lg-30">
+                    <div class="modal-title">Начать проект</div>
+                    <div class="modal-subtitle">Оставьте свои данные, и мы свяжемся с вами для уточнения деталей и подробной консультации по вашему проекту</div>
+                </div>
+
+                <!-- form -->
+                <form action="#">
+                    <div class="d-grid grid-cols-2 gap-15 gap-md-20">
+                        <div class="col-span-2">
+                            <input type="text" class="form-control input-l" placeholder="Имя">
+                        </div>
+                        <div class="col-span-2">
+                            <input type="text" class="form-control input-l" placeholder="Название компании">
+                        </div>
+                        <div class="col-span-2">
+                            <input type="text" class="form-control input-l maskPhone" placeholder="+7">
+                        </div>
+                        <div class="col-span-2">
+                            <input type="email" class="form-control input-l" placeholder="Почта">
+                        </div>
+                        <div class="col-span-2">
+                            <textarea class="form-control input-l" rows="1" placeholder="Кратко о проекте"></textarea>
+                        </div>
+                        <div class="col-span-2 mt-10 mt-lg-15">
+                            <a href="#modalSuccess" data-bs-toggle="modal" class="btn btn-gold-gradient btn-l w-100">Отправить</a>
+                        </div>
+                        <div class="col-span-2 mt-10 mt-lg-15">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="ctaCheck2">
+                                <label class="form-check-label" for="ctaCheck2">Я даю своё согласие на&nbsp;обработку <a href="#">персональных данных</a> и&nbsp;соглашаюсь с&nbsp;<a href="#">политикой конфиденциальности</a></label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
