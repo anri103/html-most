@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const maskPhone = document.querySelectorAll('.maskPhone')
     maskPhone.forEach(function (el) {
         IMask(el, {
-            mask: '+{7}(000)000-00-00'
+            mask: '+{7} (000) 000-00-00'
         });
     });
 
