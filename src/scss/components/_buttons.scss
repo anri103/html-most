@@ -24,6 +24,8 @@
 .btn-m {
     --bs-btn-padding-x: 12px;
     --bs-btn-padding-y: 0;
+    --bs-btn-font-size: 10px;
+    --bs-btn-font-weight: 300;
     min-height: 25px;
 }
 
@@ -99,6 +101,7 @@
     .btn-m {
         --bs-btn-padding-x: 22px;
         --bs-btn-padding-y: 0;
+        --bs-btn-font-size: 18px;
         min-height: 50px;
     }
 
