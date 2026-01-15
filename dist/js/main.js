@@ -20,43 +20,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scrollspy
     const isMobile = () => window.matchMedia('(max-width: 991px)').matches;
-    const getOffset = () => isMobile() ? 50 : 100;
+    const getOffset = () => isMobile() ? 50 : 90;
 
-    const easeInOutCubic = t =>
-        t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-
-    const smoothScrollTo = (target, duration = 1100) => {
-        const start = window.pageYOffset;
-        const end = target.getBoundingClientRect().top + start - getOffset();
-        const distance = end - start;
-        let startTime = null;
-
-        const step = timestamp => {
-            if (!startTime) startTime = timestamp;
-            const progress = Math.min((timestamp - startTime) / duration, 1);
-            const eased = easeInOutCubic(progress);
-            window.scrollTo(0, start + distance * eased);
-            if (progress < 1) requestAnimationFrame(step);
-        };
-
-        requestAnimationFrame(step);
+    const scrollToTarget = (target) => {
+        const y = target.getBoundingClientRect().top + window.scrollY - getOffset();
+        window.scrollTo({ top: y, behavior: 'smooth' });
     };
 
-    const menuLinks = document.querySelectorAll(
+    const links = document.querySelectorAll(
         '#primaryNav a[href^="#"], #mobileNav a[href^="#"]'
     );
 
-    menuLinks.forEach(link => {
+    links.forEach(link => {
         link.addEventListener('click', e => {
             const target = document.querySelector(link.getAttribute('href'));
             if (!target) return;
 
             e.preventDefault();
-            smoothScrollTo(target);
 
-            const offcanvas = document.getElementById('offcanvasMobileMenu');
-            if (offcanvas?.classList.contains('show')) {
-                bootstrap.Offcanvas.getInstance(offcanvas)?.hide();
+            const offcanvasEl = document.getElementById('offcanvasMobileMenu');
+            const offcanvas = offcanvasEl && bootstrap.Offcanvas.getInstance(offcanvasEl);
+
+            if (offcanvas && offcanvasEl.classList.contains('show')) {
+                offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+                    scrollToTarget(target);
+                }, { once: true });
+
+                offcanvas.hide();
+            } else {
+                scrollToTarget(target);
             }
         });
     });
