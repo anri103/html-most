@@ -15,21 +15,31 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
-    // Вызываем сразу при загрузке (на случай если страница уже прокручена)
     toggleScrollClass();
-    // Добавляем обработчик события скролла
     window.addEventListener('scroll', toggleScrollClass);
 
     // Scrollspy
     const isMobile = () => window.matchMedia('(max-width: 991px)').matches;
-    const getOffset = () => isMobile() ? 50 : 90;
+    const getOffset = () => isMobile() ? 50 : 100;
 
-    const scrollToSection = (target) => {
-        const y = target.getBoundingClientRect().top + window.scrollY - getOffset();
-        window.scrollTo({
-            top: y,
-            behavior: 'smooth'
-        });
+    const easeInOutCubic = t =>
+        t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    const smoothScrollTo = (target, duration = 1100) => {
+        const start = window.pageYOffset;
+        const end = target.getBoundingClientRect().top + start - getOffset();
+        const distance = end - start;
+        let startTime = null;
+
+        const step = timestamp => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const eased = easeInOutCubic(progress);
+            window.scrollTo(0, start + distance * eased);
+            if (progress < 1) requestAnimationFrame(step);
+        };
+
+        requestAnimationFrame(step);
     };
 
     const menuLinks = document.querySelectorAll(
@@ -42,9 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!target) return;
 
             e.preventDefault();
-            scrollToSection(target);
+            smoothScrollTo(target);
 
-            // Закрытие mobile offcanvas
             const offcanvas = document.getElementById('offcanvasMobileMenu');
             if (offcanvas?.classList.contains('show')) {
                 bootstrap.Offcanvas.getInstance(offcanvas)?.hide();
@@ -52,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ScrollSpy
     new bootstrap.ScrollSpy(document.body, { target: '#primaryNav' });
     new bootstrap.ScrollSpy(document.body, { target: '#mobileNav' });
 
