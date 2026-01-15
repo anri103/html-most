@@ -1,0 +1,63 @@
+/*------------------------------------------------------------------
+[ offcanvas ]*/
+
+// .offcanvas {}
+
+// .offcanvas-backdrop {
+//     background: rgba(0, 0, 67);
+// }
+
+/* offcanvas-mobilemenu */
+
+.offcanvas-mobilemenu {
+    // --bs-offcanvas-height: 100dvh;
+    --bs-offcanvas-padding-x: 20px;
+    --bs-offcanvas-padding-y: 20px;
+    background-image: linear-gradient(181.39deg, #040308 1.18%, #2C2837 100.6%);
+
+    &__logo img {
+        width: auto;
+        height: 35px;
+        object-fit: contain;
+    }
+
+    &__contacts {
+        --bs-link-color-rgb: 255, 255, 255;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+        text-decoration: underline;
+    }
+
+    &__socials {
+        .link-social img {
+            max-width: 100%;
+            width: 32px;
+            height: auto;
+        }
+    }
+
+    &__footer {
+        --bs-link-color-rgb: 165, 121, 103;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: #a57967;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+
+        .footer-nav {
+            --bs-nav-link-padding-x: 0;
+            --bs-nav-link-padding-y: 0;
+            --bs-nav-link-font-size: 14px;
+            --bs-nav-link-font-weight: 400;
+            --bs-nav-link-color: #a57967;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

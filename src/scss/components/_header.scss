@@ -2,67 +2,97 @@
 [ header ]*/
 
 .header {
+    --header-desktop-height: 120px;
+    --shrink-desktop-height: 90px;
+    --header-mobile-height: 60px;
+    --shrink-mobile-height: 50px;
     position: relative;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    z-index: 920;
 
-    &.js-fixed {
-        top: 10px;
-
-        .header-row {
-            border-color: var(--bs-body-bg);
-        }
-    }
-
-    @include media-breakpoint-up(md) {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    @include media-breakpoint-up(xxl) {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-}
-
-body.header-absolute {
-    .header {
-        position: absolute;
-        top: 15px;
-        left: 0;
-        right: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-        // z-index: 100;
-        transition: all 0.3s ease;
-
-        @include media-breakpoint-up(lg) {
-            top: 20px;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            top: 30px;
-        }
-    }
-}
-
-body.header-fixed {
-    .header {
+    .fixed-top {
         position: fixed;
-        top: 20px;
+        top: 0;
         left: 0;
         right: 0;
-        // z-index: 100;
-        transition: all 0.3s ease;
+        z-index: 920;
+    }
+
+    .absolute-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    // Максимальная ширина
+
+    @include media-breakpoint-down(lg) {
+        [data-device=desktop] {
+            display: none;
+        }
+
+        [data-device=mobile] {
+            .header-spacer {
+                height: var(--header-mobile-height);
+            }
+
+            .header-row {
+                min-height: var(--header-mobile-height);
+
+                &.js-scrollable {
+                    min-height: var(--shrink-mobile-height);
+                    // background-color: rgba(44, 40, 55, 0.95);
+                    background-image: linear-gradient(181.39deg, rgba(4, 3, 8, 0.95) 11.13% 11.13%, rgba(44, 40, 55, 0.95) 100.6%);
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                }
+            }
+        }
+    }
+
+    // Минимальная ширина
+
+    @include media-breakpoint-up(lg) {
+        [data-device=mobile] {
+            display: none;
+        }
+
+        [data-device=desktop] {
+            .header-spacer {
+                height: var(--header-desktop-height);
+            }
+    
+            .header-row {
+                min-height: var(--header-desktop-height);
+    
+                &.js-scrollable {
+                    min-height: var(--shrink-desktop-height);
+                    // background-color: rgba(44, 40, 55, 0.95);
+                    background-image: linear-gradient(181.39deg, rgba(4, 3, 8, 0.95) 11.13% 11.13%, rgba(44, 40, 55, 0.95) 100.6%);
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                }
+            }
+        }
     }
 }
+
+/* header-row */
 
 .header-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    transition: all 0.3s ease;
 
+    > .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* header-widget */
+
+.header-widget {
     &__logo {
         img {
             width: auto;
@@ -70,7 +100,7 @@ body.header-fixed {
             object-fit: contain;
         }
     }
-
+    
     &__phone-link {
         color: #F0DDD8;
         font-size: 20px;
@@ -78,30 +108,18 @@ body.header-fixed {
         line-height: 1;
         letter-spacing: 0.02em;
     }
-
+    
     &__phone-link:hover {
         opacity: 0.7;
     }
-
-    // Максимальная ширина
-
-    @include media-breakpoint-down(lg) {
-        &__navigation {
-            display: none;
-        }
-    }
-
+    
     // Минимальная ширина
-
+    
     @include media-breakpoint-up(lg) {
         &__logo {
             img {
                 height: 50px;
             }
-        }
-
-        .btn-mobile-toggler {
-            display: none;
         }
     }
 }
@@ -134,6 +152,10 @@ body.header-fixed {
         > a:hover {
             opacity: 0.7;
         }
+
+        >a.active {
+            color: #E8BB88;
+        }
     }
 }
 
@@ -144,7 +166,9 @@ body.header-fixed {
     flex-direction: column;
     list-style: none;
     padding-left: 0;
-    margin-bottom: 0;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    gap: 32px;
     
     a {
         display: block;
@@ -153,5 +177,9 @@ body.header-fixed {
         font-weight: 300;
         line-height: 1;
         letter-spacing: 0.02em;
+    }
+
+    a.active {
+        color: #E8BB88;
     }
 }

@@ -18,12 +18,12 @@
     --bs-btn-close-hover-opacity: 0.85;
     --bs-btn-close-focus-shadow: none;
     border-radius: 50%;
-    font-size: 18px;
-    padding: 0.875em 0.875em;
-    background-color: rgba(51, 47, 58, 0.95);
+    font-size: 14px;
     
     @include media-breakpoint-up(lg) {
         font-size: 25px;
+        padding: 0.875em 0.875em;
+        background-color: rgba(51, 47, 58, 0.95);
     }
 }
 
@@ -104,22 +104,4 @@
             font-size: 20px;
         }
     }
-}
-
-/*------------------------------------------------------------------
-[ offcanvas ]*/
-
-// .offcanvas {}
-
-// .offcanvas-backdrop {
-//     background: rgba(0, 0, 67);
-// }
-
-/* offcanvas-mobilemenu */
-
-.offcanvas-mobilemenu {
-    --bs-offcanvas-height: 100dvh;
-    // top: 15px !important;
-    // right: 15px !important;
-    // left: 15px !important;
 }

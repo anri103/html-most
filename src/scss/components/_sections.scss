@@ -163,9 +163,29 @@
     }
 
     .jumbotron {
+        position: relative;
+        overflow: hidden;
         padding: 28px;
         border-radius: var(--bs-border-radius-lg);
         background: linear-gradient(315.53deg, #040308 -24.34%, #504442 129.66%);
+
+        .bg-absolute-img-1 {
+            position: absolute;
+            top: -31px;
+            left: -80px;
+            width: auto;
+            height: auto;
+            pointer-events: none;
+        }
+
+        .bg-absolute-img-2 {
+            position: absolute;
+            top: -162px;
+            right: -26px;
+            width: auto;
+            height: auto;
+            pointer-events: none;
+        }
 
         &__title {
             font-size: 20px;
@@ -188,11 +208,48 @@
         .jumbotron {
             padding: 50px;
 
+            .bg-absolute-img-1,
+            .bg-absolute-img-2 {
+                display: none;
+            }
+
             &__title {
                 font-size: 44px;
                 margin-top: 0;
                 margin-bottom: 108px;
             }
+
+            .jumbotron-column-img {
+                margin-top: -50px;
+                margin-right: -50px;
+                margin-bottom: -50px;
+
+                img:nth-child(1),
+                img:nth-child(3) {
+                    align-self: end;
+                }
+            }
+        }
+    }
+}
+
+/* section-process */
+
+.section-process {
+    padding: 40px 0;
+    background: linear-gradient(180.83deg, #040308 0.71%, #211F2B 51.89%, #040308 98.04%);
+
+    &__header {
+        max-width: 1500px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 80px 0;
+
+        &__header {
+            margin-bottom: 60px;
         }
     }
 }
@@ -207,6 +264,25 @@
         max-width: 1500px;
         margin: 0 auto;
         margin-bottom: 32px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 80px 0;
+
+        &__header {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+/* section-team */
+
+.section-team {
+    padding: 40px 0;
+    background: #040308;
+
+    &__header {
+        margin-bottom: 25px;
     }
 
     @include media-breakpoint-up(lg) {

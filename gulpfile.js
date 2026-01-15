@@ -26,7 +26,11 @@ function html() {
 function scssStyleDev() {
   return gulp.src('src/scss/main.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(
+      sass({
+        quietDeps: true
+      }).on('error', sass.logError)
+    )
     .pipe(rename('style.min.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css/'))
@@ -36,7 +40,12 @@ function scssStyleDev() {
 // ===== SCSS: стили проекта (для продакшена без sourcemaps) =====
 function scssStyleBuild() {
   return gulp.src('src/scss/main.scss')
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(
+      sass({
+        outputStyle: 'compressed',
+        quietDeps: true
+      }).on('error', sass.logError)
+    )
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('dist/css/'))
     .pipe(browserSync.stream());
