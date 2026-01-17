@@ -67,18 +67,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fancybox
     Fancybox.bind("[data-fancybox]", {});
 
-    // teamSwiper
-    const teamSwiper = document.querySelector('.teamSwiper');
-    if (teamSwiper) {
-        new Swiper('.teamSwiper', {
+    // swiperTeamDesktop
+    const swiperTeamDesktop = document.querySelector('.swiperTeamDesktop');
+    if (swiperTeamDesktop) {
+        new Swiper('.swiperTeamDesktop', {
+            // effect: 'coverflow',
             slidesPerView: 'auto',
             spaceBetween: 20,
-            loop: false,
-            freeMode: true,
-            grabCursor: true,
+            // centeredSlides: true,
+            loop: true,
+            // coverflowEffect: {
+            //     rotate: 0,
+            //     stretch: -375,
+            //     depth: 900,
+            //     modifier: 1,
+            //     slideShadows: false,
+            // },
             navigation: {
-                nextEl: '.section-about-photos .btn-swiper-right',
-                prevEl: '.section-about-photos .btn-swiper-left',
+                nextEl: '.btn-swiper-next',
+                prevEl: '.btn-swiper-prev',
+            }
+        });
+    }
+
+    // swiperTeamMobile
+    const swiperTeamMobile = document.querySelector('.swiperTeamMobile');
+    if (swiperTeamMobile) {
+        new Swiper('.swiperTeamMobile', {
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            centeredSlides: true,
+            loop: true,
+            navigation: {
+                nextEl: '.btn-swiper-next',
+                prevEl: '.btn-swiper-prev',
             }
         });
     }
