@@ -2,10 +2,6 @@
 [ header ]*/
 
 .header {
-    --header-desktop-height: 120px;
-    --shrink-desktop-height: 90px;
-    --header-mobile-height: 60px;
-    --shrink-mobile-height: 50px;
     position: relative;
 
     .fixed-top {
@@ -23,6 +19,28 @@
         right: 0;
     }
 
+    .header-spacer {
+        height: var(--header-height);
+    }
+
+    .header-row {
+        display: flex;
+        align-items: center;
+        min-height: var(--header-height);
+        transition: all 0.3s ease;
+
+        &.js-scrollable {
+            min-height: var(--header-scrollable-height);
+        }
+
+        > .container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
     // Максимальная ширина
 
     @include media-breakpoint-down(lg) {
@@ -31,20 +49,28 @@
         }
 
         [data-device=mobile] {
-            .header-spacer {
-                height: var(--header-mobile-height);
+            --header-height: 60px;
+            --header-scrollable-height: 80px;
+
+            .header-row::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(-100%);
+                display: block;
+                width: 100%;
+                height: calc(var(--header-scrollable-height) + 20px);
+                border-bottom-left-radius: var(--bs-border-radius-lg);
+                border-bottom-right-radius: var(--bs-border-radius-lg);
+                background-image: linear-gradient(181.39deg, rgba(4, 3, 8, 0.95) 11.13% 11.13%, rgba(44, 40, 55, 0.95) 100.6%);
+                -webkit-backdrop-filter: blur(2px);
+                backdrop-filter: blur(2px);
+                transition: all 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28);
             }
 
-            .header-row {
-                min-height: var(--header-mobile-height);
-
-                &.js-scrollable {
-                    min-height: var(--shrink-mobile-height);
-                    // background-color: rgba(44, 40, 55, 0.95);
-                    background-image: linear-gradient(181.39deg, rgba(4, 3, 8, 0.95) 11.13% 11.13%, rgba(44, 40, 55, 0.95) 100.6%);
-                    -webkit-backdrop-filter: blur(5px);
-                    backdrop-filter: blur(5px);
-                }
+            .header-row.js-scrollable::before {
+                transform: translateY(-20px);
             }
         }
     }
@@ -57,36 +83,15 @@
         }
 
         [data-device=desktop] {
-            .header-spacer {
-                height: var(--header-desktop-height);
-            }
-    
-            .header-row {
-                min-height: var(--header-desktop-height);
-    
-                &.js-scrollable {
-                    min-height: var(--shrink-desktop-height);
-                    // background-color: rgba(44, 40, 55, 0.95);
-                    background-image: linear-gradient(181.39deg, rgba(4, 3, 8, 0.95) 11.13% 11.13%, rgba(44, 40, 55, 0.95) 100.6%);
-                    -webkit-backdrop-filter: blur(5px);
-                    backdrop-filter: blur(5px);
-                }
+            --header-height: 120px;
+            --header-scrollable-height: 90px;
+
+            .header-row.js-scrollable {
+                background-image: linear-gradient(181.39deg, rgba(4, 3, 8, 0.95) 11.13% 11.13%, rgba(44, 40, 55, 0.95) 100.6%);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
             }
         }
-    }
-}
-
-/* header-row */
-
-.header-row {
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-
-    > .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
 }
 
@@ -112,8 +117,6 @@
     &__phone-link:hover {
         opacity: 0.7;
     }
-    
-    // Минимальная ширина
     
     @include media-breakpoint-up(lg) {
         &__logo {

@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scrollspy
     const isMobile = () => window.matchMedia('(max-width: 991px)').matches;
-    const getOffset = () => isMobile() ? 50 : 90;
+    const getOffset = () => isMobile() ? 80 : 90;
 
     const scrollToTarget = (target) => {
         const y = target.getBoundingClientRect().top + window.scrollY - getOffset();
