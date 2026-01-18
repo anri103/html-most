@@ -1,8 +1,7 @@
 /*------------------------------------------------------------------
 [ cards ]*/
 
-/* card-about */
-
+/* card-about & card-about-last */
 .card-about {
     --bs-card-spacer-y: 24px;
     --bs-card-spacer-x: 24px;
@@ -47,7 +46,6 @@
         }
     }
 }
-
 .card-about-last {
     --bs-card-spacer-y: 24px;
     --bs-card-spacer-x: 24px;
@@ -98,7 +96,6 @@
 }
 
 /* card-category */
-
 .card-category {
     --bs-card-spacer-y: 20px;
     --bs-card-spacer-x: 20px;
@@ -163,8 +160,208 @@
     }
 }
 
-/* card-tariff */
+/* card-process */
+.card-process {
+    --bs-card-spacer-y: 0;
+    --bs-card-spacer-x: 0;
+    --bs-card-border-width: 0;
+    --bs-card-border-color: transparent;
+    --bs-card-border-radius: 0;
+    --bs-card-inner-border-radius: 0;
+    --bs-card-bg: transparent;
+    --card-content-divider: 8px;
 
+    .card-body {
+        position: relative;
+        display: grid;
+        grid-template-columns: 105px minmax(0, 1fr);
+        column-gap: 8px;
+    }
+
+    .card-index-num {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1;
+        border-radius: 50%;
+        border: 1px solid #B99FCA;
+        background: linear-gradient(0deg, #2C2C2C 0%, #181818 100%);
+    }
+
+    .card-icon {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 4;
+    }
+
+    .card-heading {
+        grid-column: 2 / span 1;
+
+        &__status {
+            color: #B99FCA;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            margin-bottom: 8px;
+        }
+
+        &__title {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            margin-bottom: 8px;
+        }
+
+        &__subtitle {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.3;
+            letter-spacing: 0.02em;
+            margin-bottom: 0;
+        }
+    }
+
+    .card-description {
+        grid-column: 1 / span 2;
+        grid-row: 5 / span 1;
+
+        &__divider {
+            display: block;
+            width: 100%;
+            height: var(--card-content-divider);
+        }
+
+        &__content {
+            font-size: 14px;
+            padding: 12px;
+            border-radius: var(--bs-border-radius-lg);
+            background: radial-gradient(86.59% 53.03% at 100% 97.82%, #534858 0%, #222126 100%);
+
+            h1,h2, h3, h4, h5, h6 {
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+
+            *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .card-btn-wrapper {
+        grid-column: 2 / span 1;
+        margin-top: 8px;
+
+        .card-btn-more {
+            --bs-btn-padding-x: 0;
+            --bs-btn-padding-y: 0;
+            --bs-btn-font-size: 14px;
+            --bs-btn-font-weight: 300;
+            --bs-btn-border-radius: 0;
+            --bs-btn-color: #B99FCA;
+            --bs-btn-bg: transparent;
+            --bs-btn-border-color: transparent;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: transparent;
+            --bs-btn-hover-border-color: transparent;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: transparent;
+            --bs-btn-active-border-color: transparent;
+            --bs-btn-disabled-color: #d6d6d6;
+            --bs-btn-disabled-bg: transparent;
+            --bs-btn-disabled-border-color: transparent;
+            min-height: 0;
+            gap: 4px;
+
+            &:not(.collapsed) .title-show-more,
+            &.collapsed .title-show-less {
+                display: none;
+            }
+
+            svg {
+                fill: currentColor;
+                transition: 0.3s ease;
+            }
+
+            &:not(.collapsed) svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .card-divider {
+        grid-column: 1 / span 2;
+        height: 1px;
+        margin-top: 12px;
+        background: linear-gradient(90deg, rgba(237, 209, 162, 0) 4.63%, #EDD1A2 35.81%, #EDD1A2 68.82%, rgba(237, 209, 162, 0) 100%);
+    }
+
+    @include media-breakpoint-up(lg) {
+        --card-content-divider: 10px;
+
+        .card-body {
+            grid-template-columns: 168px minmax(0, 1fr);
+            column-gap: 20px;
+        }
+
+        .card-index-num {
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            border-width: 2px;
+        }
+
+        .card-heading {
+            grid-column: 2 / span 1;
+
+            &__status {
+                font-size: 20px;
+            }
+
+            &__title {
+                font-size: 34px;
+            }
+            
+            &__subtitle {
+                font-size: 20px;
+            }
+        }
+
+        .card-description {
+            grid-column: 2 / span 1;
+            grid-row: auto;
+
+            &__content {
+                font-size: 24px;
+                padding: 40px;
+
+                h1,h2, h3, h4, h5, h6 {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .card-btn-wrapper {
+            .card-btn-more {
+                --bs-btn-font-size: 20px;
+            }
+        }
+
+        .card-divider {
+            grid-column: 2 / span 1;
+            margin-top: 20px;
+        }
+    }
+}
+
+/* card-tariff */
 .card-tariff {
     --bs-card-spacer-y: 24px;
     --bs-card-spacer-x: 24px;
@@ -299,7 +496,6 @@
 }
 
 /* card-team-desktop */
-
 .card-team-desktop {
     --bs-card-spacer-y: 32px;
     --bs-card-spacer-x: 24px;
@@ -314,10 +510,11 @@
 
     .card-media {
         position: absolute;
-        inset: 0;
-        width: 100%;
+        top: 50%;
+        left: 50%;
+        width: auto;
         height: 100%;
-        object-fit: contain;
+        transform: translate(-50%, -50%);
     }
 
     .card-body {
@@ -340,7 +537,6 @@
 }
 
 /* card-team-mobile */
-
 .card-team-mobile {
     --bs-card-spacer-y: 20px;
     --bs-card-spacer-x: 20px;

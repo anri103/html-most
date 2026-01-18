@@ -245,11 +245,66 @@
         margin-bottom: 32px;
     }
 
+    &__grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        column-gap: 80px;
+        row-gap: 20px;
+
+        .col-odd,
+        .col-even {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    // Максимальная ширина
+
+    @include media-breakpoint-down(lg) {
+        &__grid[data-device=desktop] {
+            display: none;
+        }
+    }
+
+    // Минимальная ширина
+
     @include media-breakpoint-up(lg) {
         padding: 80px 0;
 
         &__header {
             margin-bottom: 60px;
+        }
+
+        &__grid[data-device=mobile] {
+            display: none;
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            row-gap: 60px;
+
+            .col-odd,
+            .col-even {
+                gap: 60px;
+            }
+
+            .col-even {
+                padding-top: 110px;
+            }
+        }
+
+        &__grid::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: 1px;
+            height: 100%;
+            background: #E8BB88;
         }
     }
 }
