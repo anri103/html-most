@@ -71,18 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const swiperTeamDesktop = document.querySelector('.swiperTeamDesktop');
     if (swiperTeamDesktop) {
         new Swiper('.swiperTeamDesktop', {
-            // effect: 'coverflow',
             slidesPerView: 'auto',
             spaceBetween: 20,
             centeredSlides: true,
             loop: true,
-            // coverflowEffect: {
-            //     rotate: 0,
-            //     stretch: -375,
-            //     depth: 900,
-            //     modifier: 1,
-            //     slideShadows: false,
-            // },
             navigation: {
                 nextEl: '.btn-swiper-next',
                 prevEl: '.btn-swiper-prev',
@@ -106,3 +98,67 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+// jQuery Animations
+
+(function ($) {
+    "use strict";
+
+    // On Load Function
+    $(window).on("load", function () {
+        preloader();
+        wowAnimation();
+    });
+
+    // Wow Active
+    function wowAnimation() {
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: false,
+            live: true
+        });
+        wow.init();
+    }
+
+    // Preloader
+    function preloader() {
+        $('.preloader').delay(600).fadeOut();
+    };
+
+    // scroll-top
+    if($('.scroll-top')) {
+        var scrollTopbtn = document.querySelector('.scroll-top');
+        var progressPath = document.querySelector('.scroll-top path');
+        var pathLength = progressPath.getTotalLength();
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+        progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+        progressPath.style.strokeDashoffset = pathLength;
+        progressPath.getBoundingClientRect();
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+        var updateProgress = function () {
+            var scroll = $(window).scrollTop();
+            var height = $(document).height() - $(window).height();
+            var progress = pathLength - (scroll * pathLength / height);
+            progressPath.style.strokeDashoffset = progress;
+        }
+        updateProgress();
+        $(window).scroll(updateProgress);
+        var offset = 50;
+        var duration = 750;
+        jQuery(window).on('scroll', function() {
+            if (jQuery(this).scrollTop() > offset) {
+                jQuery(scrollTopbtn).addClass('show');
+            } else {
+                jQuery(scrollTopbtn).removeClass('show');
+            }
+        });
+        jQuery(scrollTopbtn).on('click', function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, 1);
+            return false;
+        })
+    }
+
+})(jQuery);
