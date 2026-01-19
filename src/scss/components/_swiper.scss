@@ -5,8 +5,12 @@
 
 .swiperTeamDesktop {
     .swiper-slide {
-        width: 350px;
+        width: 500px;
         height: auto;
+    }
+
+    .swiper-slide-active .card-team-desktop {
+        background: linear-gradient(180deg, #040308 45.87%, #452555 110.6%);
     }
 
     @include media-breakpoint-down(lg) {

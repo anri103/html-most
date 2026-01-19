@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // effect: 'coverflow',
             slidesPerView: 'auto',
             spaceBetween: 20,
-            // centeredSlides: true,
+            centeredSlides: true,
             loop: true,
             // coverflowEffect: {
             //     rotate: 0,
