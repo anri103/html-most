@@ -78,10 +78,10 @@
     }
     
     @include media-breakpoint-up(lg) {
-        --theme-accordion-divider: 10px;
+        --theme-accordion-divider: 15px;
     
         .accordion-button {
-            font-size: 24px;
+            font-size: 18px;
         }
 
         .accordion-body {

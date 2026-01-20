@@ -21,7 +21,7 @@
 
     @include media-breakpoint-up(lg) {
         &__subtitle {
-            font-size: 28px;
+            font-size: 24px;
         }
     }
 }
@@ -121,13 +121,13 @@
         }
 
         &__title {
-            font-size: 76px;
+            font-size: 72px;
             margin-top: 96px;
             margin-bottom: 100px;
         }
 
         &__subtitle {
-            font-size: 26px;
+            font-size: 22px;
             max-width: 822px;
         }
 
@@ -167,6 +167,8 @@
     background: #040308;
 
     &__header {
+        max-width: 1500px;
+        margin: 0 auto;
         margin-bottom: 24px;
     }
 
@@ -391,6 +393,16 @@
                 }
             }
         }
+
+        .media-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 510px;
+            }
+        }
     }
 
     @include media-breakpoint-up(lg) {
@@ -514,7 +526,7 @@
         }
 
         &__widget {
-            font-size: 34px;
+            font-size: 30px;
 
             .widget-title {
                 font-size: 24px;
