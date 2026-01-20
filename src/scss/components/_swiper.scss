@@ -4,6 +4,11 @@
 /* swiperTeamDesktop */
 
 .swiperTeamDesktop {
+    .swiper-wrapper {
+        height: 620px;
+        align-items: center;
+    }
+
     .swiper-slide {
         width: 500px;
         height: auto;
