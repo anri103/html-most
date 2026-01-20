@@ -105,3 +105,18 @@
         }
     }
 }
+
+/* modal-team-member */
+
+.modal-team-member {
+    --bs-modal-padding: 0;
+    --bs-modal-width: 1060px;
+
+    @include media-breakpoint-up(lg) {
+        .btn-close {
+            position: absolute;
+            top: 0;
+            right: -85px;
+        }
+    }
+}

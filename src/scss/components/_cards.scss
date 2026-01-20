@@ -536,6 +536,52 @@
     }
 }
 
+/* card-modal-team-member */
+
+.card-modal-team-member {
+    --bs-card-spacer-y: 44px;
+    --bs-card-spacer-x: 44px;
+    --bs-card-border-width: 0;
+    --bs-card-border-color: transparent;
+    --bs-card-border-radius: var(--bs-border-radius-lg);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #040308 45.87%, #452555 110.6%);
+
+    .card-media {
+        position: absolute;
+        bottom: -240px;
+        right: -50px;
+        width: 490px;
+        height: auto;
+    }
+
+    .card-body {
+        position: relative;
+    }
+
+    .card-title {
+        color: #fff;
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .card-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 44px;
+
+        > div {
+            min-width: 0;
+            width: 315px;
+        }
+    }
+}
+
 /* card-team-mobile */
 .card-team-mobile {
     --bs-card-spacer-y: 20px;
