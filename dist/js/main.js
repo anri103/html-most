@@ -75,6 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
             spaceBetween: 20,
             centeredSlides: true,
             loop: true,
+            slideToClickedSlide: false,
+	        // speed: 400,
+            allowTouchMove: false,
             navigation: {
                 nextEl: '.btn-swiper-next',
                 prevEl: '.btn-swiper-prev',

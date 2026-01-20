@@ -9,8 +9,12 @@
         height: auto;
     }
 
-    .swiper-slide-active .card-team-desktop {
-        background: linear-gradient(180deg, #040308 45.87%, #452555 110.6%);
+    // .swiper-slide-active .card-team-desktop {
+    //     background: linear-gradient(180deg, #040308 45.87%, #452555 110.6%);
+    // }
+
+    .card-team-desktop {
+        cursor: pointer;
     }
 
     @include media-breakpoint-down(lg) {

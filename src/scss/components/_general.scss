@@ -428,3 +428,95 @@ html { scroll-behavior: smooth; }
     .gy-xl-20 { --bs-gutter-y: 20px; }
     .gy-xl-30 { --bs-gutter-y: 30px; }
 }
+
+@include media-breakpoint-up(xxl) {
+    // grid-cols
+    .grid-cols-xxl-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-cols-xxl-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-cols-xxl-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .grid-cols-xxl-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+    // col-span
+    .col-span-xxl-1 { grid-column: span 1 / span 1; }
+    .col-span-xxl-2 { grid-column: span 2 / span 2; }
+    .col-span-xxl-3 { grid-column: span 3 / span 3; }
+    .col-span-xxl-4 { grid-column: span 4 / span 4; }
+    .col-span-xxl-5 { grid-column: span 5 / span 5; }
+    .col-span-xxl-6 { grid-column: span 6 / span 6; }
+    .col-span-xxl-7 { grid-column: span 7 / span 7; }
+    .col-span-xxl-8 { grid-column: span 8 / span 8; }
+    .col-span-xxl-9 { grid-column: span 9 / span 9; }
+    .col-span-xxl-10 { grid-column: span 10 / span 10; }
+    .col-span-xxl-11 { grid-column: span 11 / span 11; }
+    .col-span-xxl-12 { grid-column: span 12 / span 12; }
+    .col-span-xxl-13 { grid-column: span 13 / span 13; }
+    .col-span-xxl-14 { grid-column: span 14 / span 14; }
+    .col-span-xxl-15 { grid-column: span 15 / span 15; }
+    .col-span-xxl-16 { grid-column: span 16 / span 16; }
+    .col-span-xxl-17 { grid-column: span 17 / span 17; }
+    .col-span-xxl-18 { grid-column: span 18 / span 18; }
+    .col-span-xxl-19 { grid-column: span 19 / span 19; }
+    .col-span-xxl-20 { grid-column: span 20 / span 20; }
+    .col-span-xxl-21 { grid-column: span 21 / span 21; }
+    .col-span-xxl-22 { grid-column: span 22 / span 22; }
+    .col-span-xxl-23 { grid-column: span 23 / span 23; }
+    .col-span-xxl-24 { grid-column: span 24 / span 24; }
+
+    // col-start
+    .col-start-xxl-1 { grid-column-start: 1; }
+    .col-start-xxl-2 { grid-column-start: 2; }
+    .col-start-xxl-3 { grid-column-start: 3; }
+    .col-start-xxl-4 { grid-column-start: 4; }
+    .col-start-xxl-5 { grid-column-start: 5; }
+    .col-start-xxl-6 { grid-column-start: 6; }
+    .col-start-xxl-7 { grid-column-start: 7; }
+    .col-start-xxl-8 { grid-column-start: 8; }
+    .col-start-xxl-9 { grid-column-start: 9; }
+    .col-start-xxl-10 { grid-column-start: 10; }
+    .col-start-xxl-11 { grid-column-start: 11; }
+    .col-start-xxl-12 { grid-column-start: 12; }
+    .col-start-xxl-13 { grid-column-start: 13; }
+    .col-start-xxl-14 { grid-column-start: 14; }
+    .col-start-xxl-15 { grid-column-start: 15; }
+    .col-start-xxl-16 { grid-column-start: 16; }
+    .col-start-xxl-17 { grid-column-start: 17; }
+    .col-start-xxl-18 { grid-column-start: 18; }
+    .col-start-xxl-19 { grid-column-start: 19; }
+    .col-start-xxl-20 { grid-column-start: 20; }
+    .col-start-xxl-21 { grid-column-start: 21; }
+    .col-start-xxl-22 { grid-column-start: 22; }
+    .col-start-xxl-23 { grid-column-start: 23; }
+    .col-start-xxl-24 { grid-column-start: 24; }
+
+    // width
+    .w-xxl-auto { width: auto !important; }
+
+    // paddings
+    .p-xxl-10 { padding: 10px !important; }
+    .p-xxl-15 { padding: 15px !important; }
+    .p-xxl-20 { padding: 20px !important; }
+    .p-xxl-30 { padding: 30px !important; }
+    .p-xxl-40 { padding: 40px !important; }
+
+    // margins
+    .mt-xxl-15 { margin-top: 15px !important; }
+    .mt-xxl-20 { margin-top: 20px !important; }
+    .mt-xxl-50 { margin-top: 50px !important; }
+    .mb-xxl-20 { margin-bottom: 20px !important; }
+    .mb-xxl-30 { margin-bottom: 30px !important; }
+    .mb-xxl-40 { margin-bottom: 40px !important; }
+    .mb-xxl-70 { margin-bottom: 70px !important; }
+
+    // gaps
+    .gap-xxl-10 { gap: 10px !important; }
+    .gap-xxl-15 { gap: 15px !important; }
+    .gap-xxl-20 { gap: 20px !important; }
+    .gap-xxl-30 { gap: 30px !important; }
+    .gap-xxl-40 { gap: 40px !important; }
+    .gap-xxl-50 { gap: 50px !important; }
+
+    // gutters
+    .gy-xxl-15 { --bs-gutter-y: 15px; }
+    .gy-xxl-20 { --bs-gutter-y: 20px; }
+    .gy-xxl-30 { --bs-gutter-y: 30px; }
+}
