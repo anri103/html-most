@@ -510,39 +510,38 @@
     background: linear-gradient(180deg, rgba(42, 33, 42, 0) 1.92%, #2A212A 100%);
     transition: 0.3s ease;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        display: block;
-        width: 95px;
-        height: 95px;
-        opacity: 0;
-        visibility: hidden;
-        background-image: url(../img/home/npc-quest.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        transition: 0.3s ease;
-        transition-delay: 0.1s;
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     display: block;
+    //     width: 95px;
+    //     height: 95px;
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     background-image: url(../img/home/npc-quest.png);
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     background-size: contain;
+    //     transition: 0.3s ease;
+    //     transition-delay: 0.1s;
+    // }
 
     &:hover {
-        height: 620px;
         background: linear-gradient(180deg, #040308 45.87%, #452555 110.6%);
 
         .card-media {
-            top: 70%;
-            height: 120%;
+            top: 65%;
+            height: 135%;
             transition-delay: 0.1s;
         }
 
-        &::before {
-            opacity: 1;
-            visibility: visible;
-        }
+        // &::before {
+        //     opacity: 1;
+        //     visibility: visible;
+        // }
     }
 
     .card-media {
