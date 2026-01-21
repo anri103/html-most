@@ -70,20 +70,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // swiperTeamDesktop
     const swiperTeamDesktop = document.querySelector('.swiperTeamDesktop');
     if (swiperTeamDesktop) {
-        new Swiper('.swiperTeamDesktop', {
+        const swiper = new Swiper('.swiperTeamDesktop', {
             slidesPerView: 'auto',
             spaceBetween: 20,
             centeredSlides: true,
             loop: true,
             slideToClickedSlide: false,
-	        // speed: 400,
-            allowTouchMove: false,
             navigation: {
                 nextEl: '.btn-swiper-next',
                 prevEl: '.btn-swiper-prev',
             }
         });
+
+        swiper.on('sliderFirstMove', () => {
+            swiper.el.classList.add('is-dragging');
+        });
+        
+        swiper.on('slideChangeTransitionEnd', () => {
+            swiper.el.classList.remove('is-dragging');
+        });
     }
+
 
     // swiperTeamMobile
     const swiperTeamMobile = document.querySelector('.swiperTeamMobile');
@@ -131,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // scroll-top
-    if($('.scroll-top')) {
+    if ($('.scroll-top')) {
         var scrollTopbtn = document.querySelector('.scroll-top');
         var progressPath = document.querySelector('.scroll-top path');
         var pathLength = progressPath.getTotalLength();
@@ -150,16 +157,16 @@ document.addEventListener('DOMContentLoaded', () => {
         $(window).scroll(updateProgress);
         var offset = 50;
         var duration = 750;
-        jQuery(window).on('scroll', function() {
+        jQuery(window).on('scroll', function () {
             if (jQuery(this).scrollTop() > offset) {
                 jQuery(scrollTopbtn).addClass('show');
             } else {
                 jQuery(scrollTopbtn).removeClass('show');
             }
         });
-        jQuery(scrollTopbtn).on('click', function(event) {
+        jQuery(scrollTopbtn).on('click', function (event) {
             event.preventDefault();
-            jQuery('html, body').animate({scrollTop: 0}, 1);
+            jQuery('html, body').animate({ scrollTop: 0 }, 1);
             return false;
         })
     }

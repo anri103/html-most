@@ -9,6 +9,11 @@
         height: auto;
     }
 
+    &.is-dragging .card {
+        pointer-events: none;
+    }
+
+
     // .swiper-slide-active .card-team-desktop {
     //     background: linear-gradient(180deg, #040308 45.87%, #452555 110.6%);
     // }
