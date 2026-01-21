@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const swiper = new Swiper('.swiperTeamDesktop', {
             slidesPerView: 'auto',
             spaceBetween: 20,
-            centeredSlides: true,
+            // centeredSlides: true,
             loop: true,
             slideToClickedSlide: false,
             navigation: {
