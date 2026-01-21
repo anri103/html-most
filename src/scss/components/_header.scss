@@ -43,7 +43,7 @@
 
     // Максимальная ширина
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
         [data-device=desktop] {
             display: none;
         }
@@ -77,7 +77,7 @@
 
     // Минимальная ширина
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         [data-device=mobile] {
             display: none;
         }
@@ -118,7 +118,7 @@
         opacity: 0.7;
     }
     
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         &__logo {
             img {
                 height: 50px;
@@ -144,9 +144,9 @@
         > a {
             position: relative;
             display: block;
-            padding: 0 12px;
+            padding: 0 6px;
             color: #F0DDD8;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 300;
             line-height: 1;
             letter-spacing: 0.02em;
@@ -158,6 +158,13 @@
 
         >a.active {
             color: #E8BB88;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        .nav-item > a {
+            padding: 0 12px;
+            font-size: 18px;
         }
     }
 }
