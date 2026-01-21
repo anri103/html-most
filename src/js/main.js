@@ -91,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     // swiperTeamMobile
     const swiperTeamMobile = document.querySelector('.swiperTeamMobile');
     if (swiperTeamMobile) {
