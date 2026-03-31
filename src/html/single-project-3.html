@@ -1,0 +1,154 @@
+@@include('partials/header.html', {
+    "title": "Проект Ресторан 360",
+    "headerAbsolute": false
+})
+
+<!-- main -->
+<main class="main">
+
+    <!-- section-breadcrumbs -->
+    <section class="section section-breadcrumbs">
+        <div class="container">
+            <nav class="nav-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/">Главная</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span>Ресторан 360</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- section-project-hero -->
+    @@include('partials/section-project-hero.html', {
+        "bannerImg": "img/project/project-item-hero-03.jpg",
+        "title": "Ресторан 360",
+        "subtitle": "Внутренняя система для ресторанного бизнеса",
+        "direction": "Кафе и&nbsp;рестораны",
+        "deadline": "6.5 месяцев",
+    })
+
+    <!-- section-project-goal-2 -->
+    @@include('partials/section-project-goal-2.html', {
+        "goalText": "Разработать и внедрить комплексную систему для синхронизации работы персонала, ключевая задача - создать единое цифровое пространство для взаимодействия между официантами, кухней и администрацией.",
+        "goalImg": "img/project/project-goal-04.png",
+        "aboutClient": "Семейный ресторан грузинкой кухни.<br>Запрос клиента: Создать цифровой фундамент для сервиса заведения, который устранит бумажный обмен данными между залом и кухней и повысит скорость и качество обслуживания гостей.",
+        "aboutImg": "img/project/project-goal-05.png",
+    })
+
+    <!-- section-project-about-2 -->
+    @@include('partials/section-project-about-2.html', {
+        "description": "Проведя детальный анализ рабочих процессов, мы предложили клиенту не отдельный инструмент, а целостную систему, состоящую из трех взаимосвязанных компонентов:",
+        "items": [
+            {
+                "title": "Мобильное приложение для официантов",
+                "text": "инструмент для работы в зале"
+            },
+            {
+                "title": "Планшетное приложение для кухни",
+                "text": "цифровая панель управления заказами"
+            },
+            {
+                "title": "Веб-панель администратора",
+                "text": "центр управления и аналитики для руководства"
+            }
+        ]
+    })
+
+    <!-- section-with-only-header -->
+    @@include('partials/section-with-only-header.html', {
+        "title": "Для официантов - мобильное приложение:",
+        "subtitle": ""
+    })
+
+    <!-- section-project-more-about-2 -->
+    @@include('partials/section-project-more-about-2.html', {
+        "bgGradient": false,
+        "textOnLeft": true,
+        "sectionImg": "img/project/project-more-08.png",
+        "title": "Контроль столиков в реальном времени",
+        "subtitle": "Отображение активных столиков официанта, нажатие на&nbsp;столик&nbsp;— переход к&nbsp;его&nbsp;заказу. Быстрое принятие вызова от&nbsp;гостя: сразу после&nbsp;нажатия им&nbsp;кнопки на&nbsp;столе официант получает мгновенное уведомление."
+    })
+
+    <!-- section-project-more-about-2 -->
+    @@include('partials/section-project-more-about-2.html', {
+        "bgGradient": true,
+        "textOnLeft": false,
+        "sectionImg": "img/project/project-more-09.png",
+        "title": "Быстрое формирование заказа",
+        "subtitle": "Весь процесс создания заказа происходит в&nbsp;приложении: от&nbsp;выбора количества гостей до&nbsp;добавления блюд через&nbsp;удобный поиск по&nbsp;меню. К&nbsp;каждой позиции можно добавить индивидуальный комментарий от&nbsp;клиента, который увидит кухня."
+    })
+
+    <!-- section-project-more-about-2 -->
+    @@include('partials/section-project-more-about-2.html', {
+        "bgGradient": false,
+        "textOnLeft": true,
+        "sectionImg": "img/project/project-more-10.png",
+        "title": "Расчет столика",
+        "subtitle": "Последний этап обслуживания&nbsp;— формирование предчека и&nbsp;проведение оплаты. Система поддерживает различные сценарии расчёта, интегрирована с&nbsp;платёжным оборудованием заведения для&nbsp;быстрого закрытия столика."
+    })
+
+    <!-- section-with-only-header -->
+    @@include('partials/section-with-only-header.html', {
+        "title": "Для кухни - приложение для планшета:",
+        "subtitle": ""
+    })
+
+    <!-- section-project-more-about-1 -->
+    @@include('partials/section-project-more-about-1.html', {
+        "bgGradient": false,
+        "textOnLeft": false,
+        "sectionImg": "img/project/project-more-11.png",
+        "title": "Приоритетный список заказов",
+        "subtitle": "Мы создали понятный интерфейс, где заказы автоматически ранжируются. Статус каждого блюда и автоматическая фиксация времени приготовления позволяют поварам эффективно планировать работу и контролировать выполнение."
+    })
+
+    <!-- section-project-cards-about-2 -->
+    @@include('partials/section-projects-cards-about-2.html', {
+        "title": "Для администратора - веб панель управления:",
+        "subtitle": "",
+        "items": [
+            {
+                "title": "Управление персоналом и мониторинг обслуживания",
+                "text": "Централизованное управление учетными записями сотрудников и их правами доступа. Возможность в реальном времени наблюдать за ходом обслуживания и оперативно вмешиваться в нестандартные ситуации."
+            },
+            {
+                "title": "Управление меню ресторана",
+                "text": "Полный контроль над цифровым меню: от добавления новых позиций и редактирования технологических карт до мгновенного обновления статусов («стоп-лист», «доступно»)."
+            },
+            {
+                "title": "Аналитика и отчетность",
+                "text": "Готовые отчеты по эффективности сотрудников и популярности блюд дают руководству точные данные для анализа работы заведения и корректировки бизнес-стратегии."
+            }
+        ]
+    })
+
+    <!-- section-with-only-header-and-text -->
+    @@include('partials/section-with-only-header-and-text.html', {
+        "title": "Интеграция",
+        "subtitle": "Синхронизация со складов 1С:Склад"
+    })
+
+    <!-- section-project-result -->
+    @@include('partials/section-project-result.html', {
+        "icon": "img/icons/icon-result-list-2.svg",
+        "items": [
+            "Рост оборачиваемости столов и выручки в часы пик за счет значительного сокращения времени обслуживания.",
+            "Повышение точности и качества сервиса благодаря минимизации человеческого фактора и ошибок в коммуникации между залом и кухней.",
+            "Усиление управленческого контроля через внедрение прозрачных цифровых инструментов мониторинга и анализа всех ключевых процессов заведения."
+        ]
+    })
+
+    <!-- section-cta-form -->
+    @@include('partials/section-cta-form.html')
+
+    <!-- section-contacts -->
+    @@include('partials/section-contacts.html')
+
+</main>
+
+<!-- footer -->
+@@include('partials/footer.html')

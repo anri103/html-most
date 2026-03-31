@@ -1,0 +1,92 @@
+@@include('partials/header.html', {
+    "title": "Проект ЗдравКонтур",
+    "headerAbsolute": false
+})
+
+<!-- main -->
+<main class="main">
+
+    <!-- section-breadcrumbs -->
+    <section class="section section-breadcrumbs">
+        <div class="container">
+            <nav class="nav-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/">Главная</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span>ЗдравКонтур</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- section-project-hero -->
+    @@include('partials/section-project-hero.html', {
+        "bannerImg": "img/project/project-item-hero-01.jpg",
+        "title": "ЗдравКонтур",
+        "subtitle": "Цифровая система управления очередью для медицинского центра",
+        "direction": "Медицина",
+        "deadline": "3 месяца",
+    })
+
+    <!-- section-project-goal-1 -->
+    @@include('partials/section-project-goal-1.html')
+
+    <!-- section-project-about-1 -->
+    @@include('partials/section-project-about-1.html', {
+        "description": "Мы разработали и&nbsp;внедрили интегрированную систему, объединяющую четыре ключевых компонента: Терминал самообслуживания, Информационный телевизионный дисплей, Desktop приложение для&nbsp;сотрудников, Панель администратора."
+    })
+
+    <!-- section-project-more-about-1 -->
+    @@include('partials/section-project-more-about-1.html', {
+        "bgGradient": false,
+        "textOnLeft": true,
+        "sectionImg": "img/project/project-more-01.png",
+        "title": "Терминал самообслуживания",
+        "subtitle": "Позволяет пациентам самостоятельно выбрать тип&nbsp;услуги и&nbsp;получить бумажный талон. Состоит из&nbsp;планшета, чекопечатающей машины и&nbsp;стального корпуса."
+    })
+
+    <!-- section-project-more-about-1 -->
+    @@include('partials/section-project-more-about-1.html', {
+        "bgGradient": true,
+        "textOnLeft": false,
+        "sectionImg": "img/project/project-more-02.png",
+        "title": "Информационный<br> телевизионный дисплей",
+        "subtitle": "Отображает в&nbsp;реальном времени информацию о&nbsp;талонах и&nbsp;их&nbsp;регистрационных окнах. Имеет звуковое уведомление при&nbsp;вызове клиента к&nbsp;окну регистрации."
+    })
+
+    <!-- section-project-more-about-1 -->
+    @@include('partials/section-project-more-about-1.html', {
+        "bgGradient": false,
+        "textOnLeft": true,
+        "sectionImg": "img/project/project-more-03.png",
+        "title": "Desktop приложение для&nbsp;сотрудников",
+        "subtitle": "Позволяет сотрудникам управлять очередью за собственным окном, обслуживать талон и управлять своей рабочей сменой."
+    })
+
+    <!-- section-project-cards-about-1 -->
+    @@include('partials/section-projects-cards-about-1.html')
+
+    <!-- section-project-result -->
+    @@include('partials/section-project-result.html', {
+        "icon": "img/icons/icon-result-list-1.svg",
+        "items": [
+            "Сокращение времени ожидания пациентов за счет распределения очереди",
+            "Аналитика работы сотрудников и отображение отчетов в панели администратора",
+            "Повышение эффективности регистратуры за счет автоматизации процессов",
+            "Улучшение сервиса для клиентов медицинского центра"
+        ]
+    })
+
+    <!-- section-cta-form -->
+    @@include('partials/section-cta-form.html')
+
+    <!-- section-contacts -->
+    @@include('partials/section-contacts.html')
+
+</main>
+
+<!-- footer -->
+@@include('partials/footer.html')

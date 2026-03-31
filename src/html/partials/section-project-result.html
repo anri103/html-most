@@ -1,0 +1,20 @@
+<section class="section section-project-result">
+    <div class="container">
+
+        <!-- header -->
+        <div class="section-project-result__header">
+            <h2 class="section__title">Результат для бизнеса / клиента</h2>
+        </div>
+
+        <!-- flex-column -->
+        <div class="d-flex flex-column gap-15px gap-lg-20px max-w-1050px">
+            @@for(var i = 0; i < items.length; i++) {
+            <div class="d-flex align-items-start gap-15px gap-lg-20px">
+                <img class="flex-shrink-0" src="@@icon" alt="">
+                <div class="fs-4 mt-1">` + items[i] + `</div>
+            </div>
+            }
+        </div>
+
+    </div>
+</section>

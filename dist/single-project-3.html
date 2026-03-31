@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon/favicon.svg" sizes="32x32" />
+    <title>Проект Ресторан 360</title>
+
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- header -->
+    <header class="header" id="siteHeader">
+
+        <!-- desktop -->
+        <div data-device="desktop" class="">
+            <div class="header-spacer">
+                <div class="fixed-top">
+                    <div class="header-row">
+                        <div class="container">
+            
+                            <!-- logo -->
+                            <div class="header-widget__logo">
+                                <a href="/">
+                                    <img src="img/logo/logo.svg" alt="Мобильные системы и технологии">
+                                </a>
+                            </div>
+            
+                            <!-- navigation -->
+                            <nav class="header-widget__navigation">
+                                <ul class="primary-nav" id="primaryNav">
+                                    <li class="nav-item">
+                                        <a href="/#homeAboutUs">О нас</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/#homeCategories">Направления</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/#homeProcess">Процесс работы</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/#homePrice">Тарифы</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/#homeTeam">Команда</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/#homeFaq">FAQ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/#homeContacts">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+            
+                            <!-- phone -->
+                            <a href="tel:88007001212" class="header-widget__phone-link">8 800 700 1212</a>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile -->
+        <div data-device="mobile" class="">
+            <div class="header-spacer">
+                <div class="fixed-top">
+                    <div class="header-row">
+                        <div class="container">
+            
+                            <!-- logo -->
+                            <div class="header-widget__logo">
+                                <a href="/">
+                                    <img src="img/logo/logo.svg" alt="Мобильные системы и технологии">
+                                </a>
+                            </div>
+            
+                            <!-- mobile-toggler -->
+                            <button type="button" class="btn border-0 p-1 header-widget__mobile-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4.25 7C4.0375 7 3.85942 6.92808 3.71575 6.78425C3.57192 6.64041 3.5 6.46225 3.5 6.24975C3.5 6.03708 3.57192 5.859 3.71575 5.7155C3.85942 5.57183 4.0375 5.5 4.25 5.5H19.75C19.9625 5.5 20.1406 5.57191 20.2843 5.71575C20.4281 5.85958 20.5 6.03775 20.5 6.25025C20.5 6.46291 20.4281 6.641 20.2843 6.7845C20.1406 6.92816 19.9625 7 19.75 7H4.25ZM4.25 18.5C4.0375 18.5 3.85942 18.4281 3.71575 18.2842C3.57192 18.1404 3.5 17.9622 3.5 17.7497C3.5 17.5371 3.57192 17.359 3.71575 17.2155C3.85942 17.0718 4.0375 17 4.25 17H19.75C19.9625 17 20.1406 17.0719 20.2843 17.2157C20.4281 17.3596 20.5 17.5377 20.5 17.7502C20.5 17.9629 20.4281 18.141 20.2843 18.2845C20.1406 18.4282 19.9625 18.5 19.75 18.5H4.25ZM4.25 12.75C4.0375 12.75 3.85942 12.6781 3.71575 12.5342C3.57192 12.3904 3.5 12.2122 3.5 11.9997C3.5 11.7871 3.57192 11.609 3.71575 11.4655C3.85942 11.3218 4.0375 11.25 4.25 11.25H19.75C19.9625 11.25 20.1406 11.3219 20.2843 11.4657C20.4281 11.6096 20.5 11.7877 20.5 12.0002C20.5 12.2129 20.4281 12.391 20.2843 12.5345C20.1406 12.6782 19.9625 12.75 19.75 12.75H4.25Z" fill="#E3C5B6"/>
+                                </svg>
+                            </button>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- offcanvas-mobilemenu -->
+    <div class="offcanvas offcanvas-mobilemenu offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasMobileMenu">
+        <div class="offcanvas-header justify-content-between">
+            <div class="offcanvas-mobilemenu__logo">
+                <a href="/">
+                    <img class="img-fluid" src="img/logo/logo.svg" alt="Мобильные системы и технологии">
+                </a>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex flex-column justify-content-between" style="min-height: 100%;">
+                <!-- mobile-nav -->
+                <nav class="mobile-navigation">
+                    <ul class="mobile-nav" id="mobileNav">
+                        <li class="nav-item">
+                            <a href="#homeAboutUs">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#homeCategories">Направления</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#homeProcess">Процесс работы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#homePrice">Тарифы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#homeTeam">Команда</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#homeFaq">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#homeContacts">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- contacts -->
+                <div class="d-flex flex-column gap-40 mt-5 mb-3">
+                    <!-- contacts -->
+                    <div class="offcanvas-mobilemenu__contacts d-flex flex-column gap-20">
+                        <div>
+                            <a href="tel:88007001212" target="_blank">8 800 700 1212</a>
+                        </div>
+                        <div>
+                            <a href="mailto:info@most.team" target="_blank">info@most.team</a>
+                        </div>
+                    </div>
+                    <!-- socials -->
+                    <div class="offcanvas-mobilemenu__socials d-flex flex-wrap align-items-center gap-20 gap-lg-30 mt-lg-20">
+                        <!-- telegram -->
+                        <a href="#" class="link-social" target="_blank">
+                            <img src="img/icons/social-tg.png" alt="Telegram">
+                        </a>
+                        <!-- whatsapp -->
+                        <a href="#" class="link-social" target="_blank">
+                            <img src="img/icons/social-wa.png" alt="WhatsApp">
+                        </a>
+                        <!-- max -->
+                        <a href="#" class="link-social" target="_blank">
+                            <img src="img/icons/social-max.png" alt="Max">
+                        </a>
+                        <!-- pinterest -->
+                        <a href="#" class="link-social" target="_blank">
+                            <img src="img/icons/social-pinterest.png" alt="Pinterest">
+                        </a>
+                    </div>
+                    <div class="offcanvas-mobilemenu__footer">
+                        <div>©МоСТ, 2025</div>
+                        <nav class="footer-navigation">
+                            <ul class="nav footer-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Политика конфиденциальности</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Публичная оферта</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- main -->
+<main class="main">
+
+    <!-- section-breadcrumbs -->
+    <section class="section section-breadcrumbs">
+        <div class="container">
+            <nav class="nav-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/">Главная</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span>Ресторан 360</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- section-project-hero -->
+    <section class="section section-project-hero">
+    <div class="container">
+
+        <!-- hero-img -->
+        <div class="section-banner-wrapper">
+            <div class="project-meta-platforms">
+                <span>Desktop</span>
+                <span>Android</span>
+                <span>iOS</span>
+            </div>
+            <img src="img/project/project-item-hero-03.jpg" alt="">
+        </div>
+
+        <!-- header -->
+        <div class="section-project-hero__header">
+            <h1 class="h2 section__title">Ресторан 360</h1>
+            <div class="section__subtitle">Внутренняя система для ресторанного бизнеса</div>
+        </div>
+        
+        <!-- meta -->
+        <div class="section-project-hero__meta">
+            <div class="row gy-4">
+                <div class="col-lg-12">
+                    <div>
+                        <div class="h5 fw-light text-uppercase text-opacity-50 text-body mb-10">Технологии</div>
+                        <div class="fs-3">Google Flutter, PHP 8+, Laravel, MySQL 8+</div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row gy-4 gx-2">
+                        <div class="col-12 col-md-8">
+                            <div>
+                                <div class="h5 fw-light text-uppercase text-opacity-50 text-body mb-10">Направление</div>
+                                <div class="fs-3">Кафе и&nbsp;рестораны</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <div>
+                                <div class="h5 fw-light text-uppercase text-opacity-50 text-body mb-10">Срок реализации</div>
+                                <div class="fs-3">6.5 месяцев</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div>
+                                <div class="h5 fw-light text-uppercase text-opacity-50 text-body mb-10">Год</div>
+                                <div class="fs-3">2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-project-goal-2 -->
+    <section class="section section-project-goal-2">
+    <div class="container">
+        <div class="d-grid grid-cols-1 grid-cols-md-2 row-gap-30 gap-md-20">
+
+            <div class="d-flex flex-column justify-content-between gap-20px gap-lg-40px">
+                <!-- header -->
+                <div class="section-project-goal-2__header flex-fill">
+                    <h2 class="section__title">Цель проекта</h2>
+                    <div class="section__subtitle">Разработать и внедрить комплексную систему для синхронизации работы персонала, ключевая задача - создать единое цифровое пространство для взаимодействия между официантами, кухней и администрацией.</div>
+                </div>
+                <!-- image -->
+                <img class="img-fluid w-100 rounded-3" src="img/project/project-goal-04.png" alt="">
+            </div>
+
+            <div class="d-flex flex-column justify-content-between gap-20px gap-lg-40px">
+                <!-- header -->
+                <div class="section-project-goal-2__header flex-fill">
+                    <h2 class="section__title">О клиенте</h2>
+                    <div class="section__subtitle max-w-705px">Семейный ресторан грузинкой кухни.<br>Запрос клиента: Создать цифровой фундамент для сервиса заведения, который устранит бумажный обмен данными между залом и кухней и повысит скорость и качество обслуживания гостей.</div>
+                </div>
+                <!-- image -->
+                <img class="img-fluid w-100 rounded-3" src="img/project/project-goal-05.png" alt="">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- section-project-about-2 -->
+    <section class="section section-project-about-2">
+    <div class="container">
+        <div class="d-grid grid-cols-1 grid-cols-md-2 row-gap-30 gap-md-20">
+
+            <div class="header-wrapper">
+                <!-- header -->
+                <div class="section-project-about-2__header">
+                    <h2 class="section__title">О проекте</h2>
+                    <div class="section__subtitle">Проведя детальный анализ рабочих процессов, мы предложили клиенту не отдельный инструмент, а целостную систему, состоящую из трех взаимосвязанных компонентов:</div>
+                </div>
+            </div>
+
+            <!-- flex-column -->
+            <div class="d-flex flex-column gap-20px">
+                
+                <!-- item -->
+                <div class="bg-gradient-midnight rounded-3 p-20px p-lg-30px">
+                    <div class="h5 text-reset mb-2">Мобильное приложение для официантов</div>
+                    <div class="fs-x-small fw-light">инструмент для работы в зале</div>
+                </div>
+                
+                <!-- item -->
+                <div class="bg-gradient-midnight rounded-3 p-20px p-lg-30px">
+                    <div class="h5 text-reset mb-2">Планшетное приложение для кухни</div>
+                    <div class="fs-x-small fw-light">цифровая панель управления заказами</div>
+                </div>
+                
+                <!-- item -->
+                <div class="bg-gradient-midnight rounded-3 p-20px p-lg-30px">
+                    <div class="h5 text-reset mb-2">Веб-панель администратора</div>
+                    <div class="fs-x-small fw-light">центр управления и аналитики для руководства</div>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- section-with-only-header -->
+    <section class="section section-with-only-header">
+    <div class="container">
+
+        <!-- header -->
+        <div class="section-with-only-header__header">
+            <h2 class="section__title">Для официантов - мобильное приложение:</h2>
+            
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-project-more-about-2 -->
+    <section class="section section-project-more-about-2 ">
+    <div class="container">
+
+        <div class="row gy-4 align-items-center">
+
+            <div class="col-lg-12">
+                <!-- image -->
+                <img class="img-fluid w-100" src="img/project/project-more-08.png" alt="">
+            </div>
+
+            <div class="col-lg-12 order-lg-first">
+                <!-- header -->
+                <div class="section-project-more-about-2__header">
+                    <div class="h3">Контроль столиков в реальном времени</div>
+                    <div class="section__subtitle">Отображение активных столиков официанта, нажатие на&nbsp;столик&nbsp;— переход к&nbsp;его&nbsp;заказу. Быстрое принятие вызова от&nbsp;гостя: сразу после&nbsp;нажатия им&nbsp;кнопки на&nbsp;столе официант получает мгновенное уведомление.</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-project-more-about-2 -->
+    <section class="section section-project-more-about-2 bg-gradient-dark">
+    <div class="container">
+
+        <div class="row gy-4 align-items-center">
+
+            <div class="col-lg-12">
+                <!-- image -->
+                <img class="img-fluid w-100" src="img/project/project-more-09.png" alt="">
+            </div>
+
+            <div class="col-lg-12 ">
+                <!-- header -->
+                <div class="section-project-more-about-2__header">
+                    <div class="h3">Быстрое формирование заказа</div>
+                    <div class="section__subtitle">Весь процесс создания заказа происходит в&nbsp;приложении: от&nbsp;выбора количества гостей до&nbsp;добавления блюд через&nbsp;удобный поиск по&nbsp;меню. К&nbsp;каждой позиции можно добавить индивидуальный комментарий от&nbsp;клиента, который увидит кухня.</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-project-more-about-2 -->
+    <section class="section section-project-more-about-2 ">
+    <div class="container">
+
+        <div class="row gy-4 align-items-center">
+
+            <div class="col-lg-12">
+                <!-- image -->
+                <img class="img-fluid w-100" src="img/project/project-more-10.png" alt="">
+            </div>
+
+            <div class="col-lg-12 order-lg-first">
+                <!-- header -->
+                <div class="section-project-more-about-2__header">
+                    <div class="h3">Расчет столика</div>
+                    <div class="section__subtitle">Последний этап обслуживания&nbsp;— формирование предчека и&nbsp;проведение оплаты. Система поддерживает различные сценарии расчёта, интегрирована с&nbsp;платёжным оборудованием заведения для&nbsp;быстрого закрытия столика.</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-with-only-header -->
+    <section class="section section-with-only-header">
+    <div class="container">
+
+        <!-- header -->
+        <div class="section-with-only-header__header">
+            <h2 class="section__title">Для кухни - приложение для планшета:</h2>
+            
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-project-more-about-1 -->
+    <section class="section section-project-more-about-1 ">
+    <div class="container">
+
+        <div class="row gy-4 align-items-center">
+
+            <div class="col-lg-14">
+                <!-- image -->
+                <img class="img-fluid w-100" src="img/project/project-more-11.png" alt="">
+            </div>
+
+            <div class="col-lg-10 ">
+                <!-- header -->
+                <div class="section-project-more-about-1__header">
+                    <div class="h3">Приоритетный список заказов</div>
+                    <div class="section__subtitle">Мы создали понятный интерфейс, где заказы автоматически ранжируются. Статус каждого блюда и автоматическая фиксация времени приготовления позволяют поварам эффективно планировать работу и контролировать выполнение.</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-project-cards-about-2 -->
+    <section class="section section-projects-cards-about-2">
+    <div class="container">
+
+        <!-- header -->
+        <div class="section-projects-cards-about-2__header">
+            <h2 class="section__title">Для администратора - веб панель управления:</h2>
+            
+        </div>
+
+        <!-- grid -->
+        <div class="d-grid grid-cols-1 grid-cols-md-3 row-gap-15 gap-md-20">
+            
+            <!-- item -->
+            <div class="bg-gradient-midnight rounded-3 p-20px p-lg-30px">
+                <div class="h3 text-reset mb-2">Управление персоналом и мониторинг обслуживания</div>
+                <div class="fs-small fw-light">Централизованное управление учетными записями сотрудников и их правами доступа. Возможность в реальном времени наблюдать за ходом обслуживания и оперативно вмешиваться в нестандартные ситуации.</div>
+            </div>
+            
+            <!-- item -->
+            <div class="bg-gradient-midnight rounded-3 p-20px p-lg-30px">
+                <div class="h3 text-reset mb-2">Управление меню ресторана</div>
+                <div class="fs-small fw-light">Полный контроль над цифровым меню: от добавления новых позиций и редактирования технологических карт до мгновенного обновления статусов («стоп-лист», «доступно»).</div>
+            </div>
+            
+            <!-- item -->
+            <div class="bg-gradient-midnight rounded-3 p-20px p-lg-30px">
+                <div class="h3 text-reset mb-2">Аналитика и отчетность</div>
+                <div class="fs-small fw-light">Готовые отчеты по эффективности сотрудников и популярности блюд дают руководству точные данные для анализа работы заведения и корректировки бизнес-стратегии.</div>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-with-only-header-and-text -->
+    <section class="section section-with-only-header-and-text">
+    <div class="container">
+
+        <!-- header -->
+        <div class="section-with-only-header-and-text__header">
+            <h2 class="section__title">Интеграция</h2>
+            
+            <div class="section__subtitle">Синхронизация со складов 1С:Склад</div>
+            
+        </div>
+
+        <!-- text -->
+        <div class="fs-5 max-w-1350px">
+            <p>Для предотвращения заказов недоступных блюд и поддержания актуальности данных мы реализовали двухстороннюю синхронизацию со складом.</p>
+            <ul>
+                <li>На основе технологических карт система проверяет наличие ингредиентов на складе.</li>
+                <li>При оформлении заказа данные о списании ингредиентов автоматически передаются в 1С, поддерживая актуальность складских остатков и обеспечивая точный учет.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-project-result -->
+    <section class="section section-project-result">
+    <div class="container">
+
+        <!-- header -->
+        <div class="section-project-result__header">
+            <h2 class="section__title">Результат для бизнеса / клиента</h2>
+        </div>
+
+        <!-- flex-column -->
+        <div class="d-flex flex-column gap-15px gap-lg-20px max-w-1050px">
+            
+            <div class="d-flex align-items-start gap-15px gap-lg-20px">
+                <img class="flex-shrink-0" src="img/icons/icon-result-list-2.svg" alt="">
+                <div class="fs-4 mt-1">Рост оборачиваемости столов и выручки в часы пик за счет значительного сокращения времени обслуживания.</div>
+            </div>
+            
+            <div class="d-flex align-items-start gap-15px gap-lg-20px">
+                <img class="flex-shrink-0" src="img/icons/icon-result-list-2.svg" alt="">
+                <div class="fs-4 mt-1">Повышение точности и качества сервиса благодаря минимизации человеческого фактора и ошибок в коммуникации между залом и кухней.</div>
+            </div>
+            
+            <div class="d-flex align-items-start gap-15px gap-lg-20px">
+                <img class="flex-shrink-0" src="img/icons/icon-result-list-2.svg" alt="">
+                <div class="fs-4 mt-1">Усиление управленческого контроля через внедрение прозрачных цифровых инструментов мониторинга и анализа всех ключевых процессов заведения.</div>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-cta-form -->
+    <section class="section section-cta-form" id="homeCtaForm">
+    <div class="container">
+
+        <div class="cta-form-wrapper">
+            <img class="bg-absolute-img" src="img/home/cta-form-bg-01.svg" alt="">
+            <div class="position-relative">
+                <div class="d-grid grid-cols-24 row-gap-30 gap-md-20">
+                    <div class="col-span-24 col-span-lg-10">
+                        <h2 class="section__title section-cta-form__title">Готовы создать мобильное приложение?</h2>
+                        <div class="section-cta-form__subtitle">Полный цикл: от&nbsp;идеи и&nbsp;проектирования
+                            до&nbsp;публикации в&nbsp;App Store, Google Play, RuStore и AppGallery&nbsp;— и&nbsp;дальше
+                            помогаем с&nbsp;развитием, обновлениями и&nbsp;поддержкой</div>
+                    </div>
+                    <div class="col-span-24 col-span-lg-14">
+                        <!-- form -->
+                        <form action="#">
+                            <div class="d-grid grid-cols-2 gap-15 gap-md-20">
+                                <div class="col-span-2 col-span-md-1">
+                                    <input type="text" class="form-control input-l" placeholder="Имя">
+                                </div>
+                                <div class="col-span-2 col-span-md-1">
+                                    <input type="text" class="form-control input-l" placeholder="Название компании">
+                                </div>
+                                <div class="col-span-2 col-span-md-1">
+                                    <input type="text" class="form-control input-l maskPhone" placeholder="+7">
+                                </div>
+                                <div class="col-span-2 col-span-md-1">
+                                    <input type="email" class="form-control input-l" placeholder="Почта">
+                                </div>
+                                <div class="col-span-2">
+                                    <textarea class="form-control input-l" rows="3"
+                                        placeholder="Кратко о проекте"></textarea>
+                                </div>
+                                <div class="col-span-2 mt-10 mt-lg-15">
+                                    <a href="#modalSuccess" data-bs-toggle="modal"
+                                        class="btn btn-gold-gradient btn-l w-100">Обсудить проект</a>
+                                </div>
+                                <div class="col-span-2 mt-10 mt-lg-15">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="ctaCheck1">
+                                        <label class="form-check-label" for="ctaCheck1">Я даю своё согласие
+                                            на&nbsp;обработку <a href="#">персональных данных</a> и&nbsp;соглашаюсь
+                                            с&nbsp;<a href="#">политикой конфиденциальности</a></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-contacts -->
+    <section class="section section-contacts" id="homeContacts">
+    <div class="container">
+
+        <!-- header -->
+        <div class="section-contacts__header">
+            <h2 class="section__title">Контакты</h2>
+        </div>
+
+        <!-- grid -->
+        <div class="d-grid grid-cols-24 row-gap-20 gap-lg-40">
+            <div class="col-span-24 col-span-lg-14">
+                <div class="d-flex flex-column gap-20 gap-md-40">
+                    <div class="section-contacts__widget">
+                        <div class="widget-title">Время работы</div>
+                        <div>8:30 - 17:30 мск</div>
+                    </div>
+                    <div class="section-contacts__widget">
+                        <div class="widget-title">Офис</div>
+                        <div>г. Йошкар-Ола, ул. Прохорова,<br>
+                            д. 37 Б, офис 309</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-24 col-span-lg-10">
+                <div class="d-flex flex-column gap-20 gap-md-40">
+                    <div class="section-contacts__widget">
+                        <div class="d-flex flex-column gap-15 gap-md-20">
+                            <div>
+                                <a href="tel:88007001212">8 800 700 1212</a>
+                            </div>
+                            <div>
+                                <a href="mailto:info@most.team">info@most.team</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-contacts__widget d-flex flex-wrap align-items-center gap-20 gap-lg-30 mt-lg-20">
+                        <!-- telegram -->
+                        <a href="#" class="link-social" target="_blank">
+                            <img src="img/icons/social-tg.png" alt="Telegram">
+                        </a>
+                        <!-- whatsapp -->
+                        <a href="#" class="link-social" target="_blank">
+                            <img src="img/icons/social-wa.png" alt="WhatsApp">
+                        </a>
+                        <!-- max -->
+                        <a href="#" class="link-social" target="_blank">
+                            <img src="img/icons/social-max.png" alt="Max">
+                        </a>
+                        <!-- pinterest -->
+                        <a href="#" class="link-social" target="_blank">
+                            <img src="img/icons/social-pinterest.png" alt="Pinterest">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                
+                <!-- footer-main-bar -->
+                <div class="footer-main-bar">
+                    <div class="footer-main-bar__widget">
+                        <div class="footer-logo">
+                            <img src="img/logo/logo-footer.svg" alt="Мобильные системы и технологии">
+                        </div>
+                    </div>
+                    <div class="footer-main-bar__widget">
+                        <nav class="footer-navigation">
+                            <ul class="nav footer-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Главная</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">О нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Направления</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Команда</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Процесс работы</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-main-bar__widget">
+                        <nav class="footer-navigation">
+                            <ul class="nav footer-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Политика конфиденциальности</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Публичная оферта</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Политика использования cookies</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-main-bar__widget">
+                        <div class="footer-contacts d-flex flex-column gap-15 gap-md-20">
+                            <div>
+                                <a href="tel:88007001212">8 800 700 1212</a>
+                            </div>
+                            <div>
+                                <a href="mailto:info@most.team">info@most.team</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- footer-copyright-bar -->
+                <div class="footer-copyright-bar">
+                    <div class="footer-copyright-bar__widget">
+                        <div class="d-flex flex-wrap gap-15">
+                            <div>ООО «СМАРТКОИН»</div>
+                            <div>ИНН 1215218922</div>
+                            <div>ОГРН 1171215005620</div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright-bar__widget">
+                        <div>©МоСТ, 2025</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- modal-consultation -->
+    <div class="modal modal-consultation fade" id="modalConsultation" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- modal-body -->
+            <div class="modal-body">
+
+                <!-- btn-close -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- header -->
+                <div class="text-center mb-20 mb-lg-30">
+                    <div class="modal-title">Начать проект</div>
+                    <div class="modal-subtitle">Оставьте свои данные, и мы свяжемся с вами для уточнения деталей и подробной консультации по вашему проекту</div>
+                </div>
+
+                <!-- form -->
+                <form action="#">
+                    <div class="d-grid grid-cols-2 gap-15 gap-md-20">
+                        <div class="col-span-2">
+                            <input type="text" class="form-control input-l" placeholder="Имя">
+                        </div>
+                        <div class="col-span-2">
+                            <input type="text" class="form-control input-l" placeholder="Название компании">
+                        </div>
+                        <div class="col-span-2">
+                            <input type="text" class="form-control input-l maskPhone" placeholder="+7">
+                        </div>
+                        <div class="col-span-2">
+                            <input type="email" class="form-control input-l" placeholder="Почта">
+                        </div>
+                        <div class="col-span-2">
+                            <textarea class="form-control input-l" rows="1" placeholder="Кратко о проекте"></textarea>
+                        </div>
+                        <div class="col-span-2 mt-10 mt-lg-15">
+                            <a href="#modalSuccess" data-bs-toggle="modal" class="btn btn-gold-gradient btn-l w-100">Отправить</a>
+                        </div>
+                        <div class="col-span-2 mt-10 mt-lg-15">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="ctaCheck2">
+                                <label class="form-check-label" for="ctaCheck2">Я даю своё согласие на&nbsp;обработку <a href="#">персональных данных</a> и&nbsp;соглашаюсь с&nbsp;<a href="#">политикой конфиденциальности</a></label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- modal-success -->
+    <div class="modal modal-success fade" id="modalSuccess" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <!-- btn-close -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- text -->
+                <div class="text-center">
+                    <div class="mb-20">
+                        <img class="modal-img img-fluid" src="img/home/modal-check-01.png" alt="">
+                    </div>
+                    <div class="modal-title mb-20">Спасибо за доверие!<br>Заявка успешно отправлена</div>
+                    <div class="modal-subtitle">Мы&nbsp;уже получили ваш&nbsp;запрос и&nbsp;передали его&nbsp;в&nbsp;отдел продаж. Наш&nbsp;специалист внимательно изучит вашу задачу, чтобы&nbsp;предложить решение, которое соответствует вашим целям и&nbsp;бюджету, свяжется с&nbsp;вами в&nbsp;ближайшее время, ответит на&nbsp;вопросы и&nbsp;обсудит удобный формат дальнейшей работы.</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- modal-team-member -->
+    <!-- modal modal-team-member: CTO -->
+<div class="modal modal-team-member fade" id="modalTeamMember1" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <!-- btn-close -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- card -->
+                <div class="card card-modal-team-member">
+                    <img class="card-media" src="img/home/card-team-member-04.png" alt="">
+                    <div class="card-body">
+                        <div class="card-title">CTO</div>
+                        <div class="card-content">
+                            <div>
+                                <h4>Наша экспертиза и технологии</h4>
+                                <p>•&nbsp;Опыт:&nbsp;10+ лет в мобильной разработке.</p>
+                                <p>•&nbsp;Компетенции:&nbsp;Full-stack архитектор (клиент-сервер).</p>
+                                <p>•&nbsp;Сферы:&nbsp;Финансы (FinTech), e-commerce, медицина (HealthTech), социальные проекты, IoT.</p>
+                                <p>•&nbsp;Технологии:&nbsp;Знание всего цикла от выбора стека (Flutter vs Native) до проектирования масштабируемых серверных кластеров (AWS, GCP, микросервисы).</p>
+                            </div>
+                            <div>
+                                <h4>Ваша выгода и результат</h4>
+                                <p>Вы получаете технологического партнера, а не подрядчика.</p>
+                                <p>•&nbsp;Снижаете риски:&nbsp;Архитектура, заложенная с первого дня, позволяет масштабироваться без дорогих переделок.</p>
+                                <p>•&nbsp;Экономите бюджет:&nbsp;Оптимальный выбор технологий под ваши задачи, а не модные тренды.</p>
+                                <p>•&nbsp;Получаете конкурентное преимущество:&nbsp;Опыт в различных сферах позволяет предлагать проверенные и инновационные решения.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal modal-team-member: Frontend-разработчик -->
+<div class="modal modal-team-member fade" id="modalTeamMember2" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <!-- btn-close -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- card -->
+                <div class="card card-modal-team-member">
+                    <img class="card-media" src="img/home/card-team-member-05.png" alt="">
+                    <div class="card-body">
+                        <div class="card-title">Frontend-разработчик</div>
+                        <div class="card-content">
+                            <div>
+                                <h4>Наша экспертиза и технологии</h4>
+                                <p>•&nbsp;Опыт:&nbsp;10+ лет в мобильной разработке.</p>
+                                <p>•&nbsp;Компетенции:&nbsp;Full-stack архитектор (клиент-сервер).</p>
+                                <p>•&nbsp;Сферы:&nbsp;Финансы (FinTech), e-commerce, медицина (HealthTech), социальные проекты, IoT.</p>
+                                <p>•&nbsp;Технологии:&nbsp;Знание всего цикла от выбора стека (Flutter vs Native) до проектирования масштабируемых серверных кластеров (AWS, GCP, микросервисы).</p>
+                            </div>
+                            <div>
+                                <h4>Ваша выгода и результат</h4>
+                                <p>Вы получаете технологического партнера, а не подрядчика.</p>
+                                <p>•&nbsp;Снижаете риски:&nbsp;Архитектура, заложенная с первого дня, позволяет масштабироваться без дорогих переделок.</p>
+                                <p>•&nbsp;Экономите бюджет:&nbsp;Оптимальный выбор технологий под ваши задачи, а не модные тренды.</p>
+                                <p>•&nbsp;Получаете конкурентное преимущество:&nbsp;Опыт в различных сферах позволяет предлагать проверенные и инновационные решения.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal modal-team-member: Backend-разработчик -->
+<div class="modal modal-team-member fade" id="modalTeamMember3" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <!-- btn-close -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- card -->
+                <div class="card card-modal-team-member">
+                    <img class="card-media" src="img/home/card-team-member-06.png" alt="">
+                    <div class="card-body">
+                        <div class="card-title">Backend-разработчик</div>
+                        <div class="card-content">
+                            <div>
+                                <h4>Наша экспертиза и технологии</h4>
+                                <p>•&nbsp;Опыт:&nbsp;10+ лет в мобильной разработке.</p>
+                                <p>•&nbsp;Компетенции:&nbsp;Full-stack архитектор (клиент-сервер).</p>
+                                <p>•&nbsp;Сферы:&nbsp;Финансы (FinTech), e-commerce, медицина (HealthTech), социальные проекты, IoT.</p>
+                                <p>•&nbsp;Технологии:&nbsp;Знание всего цикла от выбора стека (Flutter vs Native) до проектирования масштабируемых серверных кластеров (AWS, GCP, микросервисы).</p>
+                            </div>
+                            <div>
+                                <h4>Ваша выгода и результат</h4>
+                                <p>Вы получаете технологического партнера, а не подрядчика.</p>
+                                <p>•&nbsp;Снижаете риски:&nbsp;Архитектура, заложенная с первого дня, позволяет масштабироваться без дорогих переделок.</p>
+                                <p>•&nbsp;Экономите бюджет:&nbsp;Оптимальный выбор технологий под ваши задачи, а не модные тренды.</p>
+                                <p>•&nbsp;Получаете конкурентное преимущество:&nbsp;Опыт в различных сферах позволяет предлагать проверенные и инновационные решения.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal modal-team-member: Тестировщик -->
+<div class="modal modal-team-member fade" id="modalTeamMember4" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <!-- btn-close -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- card -->
+                <div class="card card-modal-team-member">
+                    <img class="card-media" src="img/home/card-team-member-07.png" alt="">
+                    <div class="card-body">
+                        <div class="card-title">Тестировщик</div>
+                        <div class="card-content">
+                            <div>
+                                <h4>Наша экспертиза и технологии</h4>
+                                <p>•&nbsp;Опыт:&nbsp;10+ лет в мобильной разработке.</p>
+                                <p>•&nbsp;Компетенции:&nbsp;Full-stack архитектор (клиент-сервер).</p>
+                                <p>•&nbsp;Сферы:&nbsp;Финансы (FinTech), e-commerce, медицина (HealthTech), социальные проекты, IoT.</p>
+                                <p>•&nbsp;Технологии:&nbsp;Знание всего цикла от выбора стека (Flutter vs Native) до проектирования масштабируемых серверных кластеров (AWS, GCP, микросервисы).</p>
+                            </div>
+                            <div>
+                                <h4>Ваша выгода и результат</h4>
+                                <p>Вы получаете технологического партнера, а не подрядчика.</p>
+                                <p>•&nbsp;Снижаете риски:&nbsp;Архитектура, заложенная с первого дня, позволяет масштабироваться без дорогих переделок.</p>
+                                <p>•&nbsp;Экономите бюджет:&nbsp;Оптимальный выбор технологий под ваши задачи, а не модные тренды.</p>
+                                <p>•&nbsp;Получаете конкурентное преимущество:&nbsp;Опыт в различных сферах позволяет предлагать проверенные и инновационные решения.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal modal-team-member: Менеджер -->
+<div class="modal modal-team-member fade" id="modalTeamMember5" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <!-- btn-close -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- card -->
+                <div class="card card-modal-team-member">
+                    <img class="card-media" src="img/home/card-team-member-01.png" alt="">
+                    <div class="card-body">
+                        <div class="card-title">Менеджер</div>
+                        <div class="card-content">
+                            <div>
+                                <h4>Наша экспертиза и технологии</h4>
+                                <p>•&nbsp;Опыт:&nbsp;10+ лет в мобильной разработке.</p>
+                                <p>•&nbsp;Компетенции:&nbsp;Full-stack архитектор (клиент-сервер).</p>
+                                <p>•&nbsp;Сферы:&nbsp;Финансы (FinTech), e-commerce, медицина (HealthTech), социальные проекты, IoT.</p>
+                                <p>•&nbsp;Технологии:&nbsp;Знание всего цикла от выбора стека (Flutter vs Native) до проектирования масштабируемых серверных кластеров (AWS, GCP, микросервисы).</p>
+                            </div>
+                            <div>
+                                <h4>Ваша выгода и результат</h4>
+                                <p>Вы получаете технологического партнера, а не подрядчика.</p>
+                                <p>•&nbsp;Снижаете риски:&nbsp;Архитектура, заложенная с первого дня, позволяет масштабироваться без дорогих переделок.</p>
+                                <p>•&nbsp;Экономите бюджет:&nbsp;Оптимальный выбор технологий под ваши задачи, а не модные тренды.</p>
+                                <p>•&nbsp;Получаете конкурентное преимущество:&nbsp;Опыт в различных сферах позволяет предлагать проверенные и инновационные решения.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal modal-team-member: X/UI Дизайнер -->
+<div class="modal modal-team-member fade" id="modalTeamMember6" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <!-- btn-close -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- card -->
+                <div class="card card-modal-team-member">
+                    <img class="card-media" src="img/home/card-team-member-02.png" alt="">
+                    <div class="card-body">
+                        <div class="card-title">UX/UI Дизайнер</div>
+                        <div class="card-content">
+                            <div>
+                                <h4>Наша экспертиза и технологии</h4>
+                                <p>•&nbsp;Опыт:&nbsp;10+ лет в мобильной разработке.</p>
+                                <p>•&nbsp;Компетенции:&nbsp;Full-stack архитектор (клиент-сервер).</p>
+                                <p>•&nbsp;Сферы:&nbsp;Финансы (FinTech), e-commerce, медицина (HealthTech), социальные проекты, IoT.</p>
+                                <p>•&nbsp;Технологии:&nbsp;Знание всего цикла от выбора стека (Flutter vs Native) до проектирования масштабируемых серверных кластеров (AWS, GCP, микросервисы).</p>
+                            </div>
+                            <div>
+                                <h4>Ваша выгода и результат</h4>
+                                <p>Вы получаете технологического партнера, а не подрядчика.</p>
+                                <p>•&nbsp;Снижаете риски:&nbsp;Архитектура, заложенная с первого дня, позволяет масштабироваться без дорогих переделок.</p>
+                                <p>•&nbsp;Экономите бюджет:&nbsp;Оптимальный выбор технологий под ваши задачи, а не модные тренды.</p>
+                                <p>•&nbsp;Получаете конкурентное преимущество:&nbsp;Опыт в различных сферах позволяет предлагать проверенные и инновационные решения.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal modal-team-member: Бизнес аналитик -->
+<div class="modal modal-team-member fade" id="modalTeamMember7" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <!-- btn-close -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- card -->
+                <div class="card card-modal-team-member">
+                    <img class="card-media" src="img/home/card-team-member-03.png" alt="">
+                    <div class="card-body">
+                        <div class="card-title">Бизнес аналитик</div>
+                        <div class="card-content">
+                            <div>
+                                <h4>Наша экспертиза и технологии</h4>
+                                <p>•&nbsp;Опыт:&nbsp;10+ лет в мобильной разработке.</p>
+                                <p>•&nbsp;Компетенции:&nbsp;Full-stack архитектор (клиент-сервер).</p>
+                                <p>•&nbsp;Сферы:&nbsp;Финансы (FinTech), e-commerce, медицина (HealthTech), социальные проекты, IoT.</p>
+                                <p>•&nbsp;Технологии:&nbsp;Знание всего цикла от выбора стека (Flutter vs Native) до проектирования масштабируемых серверных кластеров (AWS, GCP, микросервисы).</p>
+                            </div>
+                            <div>
+                                <h4>Ваша выгода и результат</h4>
+                                <p>Вы получаете технологического партнера, а не подрядчика.</p>
+                                <p>•&nbsp;Снижаете риски:&nbsp;Архитектура, заложенная с первого дня, позволяет масштабироваться без дорогих переделок.</p>
+                                <p>•&nbsp;Экономите бюджет:&nbsp;Оптимальный выбор технологий под ваши задачи, а не модные тренды.</p>
+                                <p>•&nbsp;Получаете конкурентное преимущество:&nbsp;Опыт в различных сферах позволяет предлагать проверенные и инновационные решения.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+
+    <!-- scripts -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/imask.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

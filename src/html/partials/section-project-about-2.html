@@ -1,0 +1,26 @@
+<section class="section section-project-about-2">
+    <div class="container">
+        <div class="d-grid grid-cols-1 grid-cols-md-2 row-gap-30 gap-md-20">
+
+            <div class="header-wrapper">
+                <!-- header -->
+                <div class="section-project-about-2__header">
+                    <h2 class="section__title">О проекте</h2>
+                    <div class="section__subtitle">@@description</div>
+                </div>
+            </div>
+
+            <!-- flex-column -->
+            <div class="d-flex flex-column gap-20px">
+                @@for(var i = 0; i < items.length; i++) {
+                <!-- item -->
+                <div class="bg-gradient-midnight rounded-3 p-20px p-lg-30px">
+                    <div class="h5 text-reset mb-2">` + items[i].title + `</div>
+                    <div class="fs-x-small fw-light">` + items[i].text + `</div>
+                </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,181 @@
+@@include('partials/header.html', {
+    "title": "Проект Контур Доступа",
+    "headerAbsolute": false
+})
+
+<!-- main -->
+<main class="main">
+
+    <!-- section-breadcrumbs -->
+    <section class="section section-breadcrumbs">
+        <div class="container">
+            <nav class="nav-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/">Главная</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span>Контур Доступа</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- section-project-hero -->
+    @@include('partials/section-project-hero.html', {
+        "bannerImg": "img/project/project-item-hero-04.jpg",
+        "title": "Контур Доступа",
+        "subtitle": "Система контроля доступа и мониторинга персонала",
+        "direction": "Безопасность",
+        "deadline": "12 месяцев",
+    })
+
+    <!-- section-project-goal-2 -->
+    @@include('partials/section-project-goal-2.html', {
+        "goalText": "Автоматизировать контроль доступа и посещаемости, повысить оперативность работы поста охраны за счет современного интерфейса и предоставить руководству прозрачную аналитику для контроля трудовой дисциплины без необходимости ручной обработки данных.",
+        "goalImg": "img/project/project-goal-06.png",
+        "aboutClient": "Решение предназначено для предприятий и объектов с контролируемым доступом",
+        "aboutImg": "img/project/project-goal-07.png",
+    })
+
+    <!-- section-project-about-1 -->
+    @@include('partials/section-project-about-1.html', {
+        "description": "Проект представляет собой комплексное решение, состоящее из&nbsp;трёх пользовательских контуров, объединённых общим бэкендом и&nbsp;интеграционным слоем с&nbsp;PERCo. Мы&nbsp;разработали интуитивные и&nbsp;современные интерфейсы для&nbsp;разных устройств: крупный информационный инструмент для&nbsp;проходной, мобильное приложение для&nbsp;руководителей и&nbsp;веб-панель для&nbsp;тонкой настройки системы и&nbsp;формирования сложной отчётности."
+    })
+
+    <!-- section-with-only-header -->
+    @@include('partials/section-with-only-header.html', {
+        "title": "Окно мониторинга персонала",
+        "subtitle": "Обеспечение ситуационной осведомленности поста охраны в реальном времени."
+    })
+
+    <!-- section-project-more-about-3 -->
+    @@include('partials/section-project-more-about-3.html', {
+        "title": "Контроль событий в реальном времени",
+        "subtitle": "Отображение всех проходов (вход/выход) в&nbsp;реальном времени с&nbsp;указанием ФИО, подразделения и&nbsp;точки доступа. Мгновенное оповещение охраны о&nbsp;нештатных ситуациях с&nbsp;помощью индикаторов: попытка входа с&nbsp;заблокированной картой, технический сбой турникета и&nbsp;другие.",
+        "items": [
+            "img/project/project-more-12.png",
+            "img/project/project-more-13.png",
+            "img/project/project-more-14.png",
+            "img/project/project-more-15.png"
+        ]
+    })
+
+    <!-- section-project-more-about-3 -->
+    @@include('partials/section-project-more-about-3.html', {
+        "title": "Быстрый поиск сотрудников",
+        "subtitle": "Возможность быстро найти работника и&nbsp;проверить его&nbsp;статус нахождения на&nbsp;территории организации. Отображение необходимой для&nbsp;поста охраны информации по&nbsp;каждому работнику.",
+        "items": [
+            "img/project/project-more-16.png",
+            "img/project/project-more-17.png"
+        ]
+    })
+
+    <div class="bg-gradient-dark pt-40px pb-40px pt-lg-80px mt-40px mt-lg-60px">
+
+        <!-- section-with-only-header -->
+        @@include('partials/section-with-only-header.html', {
+            "title": "Приложение для руководителей",
+            "subtitle": "Предоставление удобного доступа к аналитике по посещаемости и отклонениям подчиненных"
+        })
+
+        <!-- section-project-more-about-2 -->
+        @@include('partials/section-project-more-about-2.html', {
+            "bgGradient": false,
+            "textOnLeft": true,
+            "sectionImg": "img/project/project-more-18.png",
+            "title": "Сводка дня",
+            "subtitle": "Главный экран приложения отображает общий процент присутствия сотрудников на&nbsp;текущий день, а&nbsp;также динамику за&nbsp;неделю. Это&nbsp;позволяет быстро оценить ситуацию в&nbsp;подразделении и&nbsp;скорректировать планы с&nbsp;учётом фактической явки."
+        })
+
+        <!-- section-project-more-about-2 -->
+        @@include('partials/section-project-more-about-2.html', {
+            "bgGradient": false,
+            "textOnLeft": false,
+            "sectionImg": "img/project/project-more-19.png",
+            "title": "Контроль посещаемости сотрудников",
+            "subtitle": "Возможность увидеть сводку данных по&nbsp;посещению подчинённых: опоздания, ранний уход, опоздание по&nbsp;уважительной причине, отпуск. Руководитель видит все&nbsp;отклонения от&nbsp;графика в&nbsp;удобном структурированном виде."
+        })
+
+        <!-- section-project-more-about-2 -->
+        @@include('partials/section-project-more-about-2.html', {
+            "bgGradient": false,
+            "textOnLeft": true,
+            "sectionImg": "img/project/project-more-20.png",
+            "title": "Отчеты о посещаемости сотрудников",
+            "subtitle": "Просмотр отчётов по&nbsp;сотрудникам, отделам или&nbsp;объектам за&nbsp;определённый период, ключевые метрики рассчитываются автоматически. Готовый отчёт можно экспортировать или&nbsp;безопасно поделиться им&nbsp;с&nbsp;коллегами."
+        })
+
+        <!-- section-project-more-about-2 -->
+        @@include('partials/section-project-more-about-2.html', {
+            "bgGradient": false,
+            "textOnLeft": false,
+            "sectionImg": "img/project/project-more-21.png",
+            "title": "Отклонения от нормы и подозрительная активность",
+            "subtitle": "Система в&nbsp;реальном времени анализирует события и&nbsp;при&nbsp;выявлении подозрительной активности отправляет руководителю пуш-уведомление. Доступна детальная расшифровка инцидента, что&nbsp;позволяет своевременно принять меры для&nbsp;обеспечения трудовой дисциплины."
+        })
+
+    </div>
+
+    <!-- section-project-cards-about-2 -->
+    @@include('partials/section-projects-cards-about-2.html', {
+        "title": "Панель администратора",
+        "subtitle": "Централизованное управление пользователями, их правами и аналитикой данных",
+        "items": [
+            {
+                "title": "Управление сотрудниками и их пропускам",
+                "text": "Ведение базы сотрудников, подразделений, графиков работы и управление пропусками (выдача, блокировка, замена)."
+            },
+            {
+                "title": "Настройки синхронизации",
+                "text": "Управление параметрами синхронизации к PERCo, отслеживание статусов и событий. Упрощение мониторинга работоспособности системы и ускорение устранения возможных сбоев."
+            },
+            {
+                "title": "Отчетность и аудит",
+                "text": "Возможность формирования и выгрузки отчетов по посещаемости, загрузке сотрудников и событиям в форматах XLSX, CSV, PDF. Ведение лога действий руководителей: кто, когда и какие данные менял или выгружал."
+            }
+        ]
+    })
+
+    <!-- section-with-only-header -->
+    @@include('partials/section-with-only-header.html', {
+        "title": "Режим крупного интерфейса для ТВ",
+        "subtitle": "Предоставление удобного доступа к аналитике по посещаемости и отклонениям подчиненных"
+    })
+
+    <!-- section-project-more-about-1 -->
+    @@include('partials/section-project-more-about-1.html', {
+        "bgGradient": false,
+        "textOnLeft": true,
+        "sectionImg": "img/project/project-more-22.png",
+        "title": "Интерфейс для TV",
+        "subtitle": "Обеспечивается учет и визуальное отображение данных о рабочем времени сотрудников для наблюдения и проведения дальнейшей аналитики"
+    })
+
+    <!-- section-with-only-header-and-text -->
+    @@include('partials/section-with-only-header-and-text.html', {
+        "title": "Интеграция",
+        "subtitle": "Ключевой особенностью проекта является интеграция с системой PERCo на предприятии. Разработанный интеграционный слой решает следующие задачи:"
+    })
+
+    <!-- section-project-result -->
+    @@include('partials/section-project-result.html', {
+        "icon": "img/icons/icon-result-list-3.svg",
+        "items": [
+            "Для охраны: Снижение ручной нагрузки и ускорение реакции на инциденты благодаря понятному интерфейсу с визуальными подсказками.",
+            "Для руководства: Повышение прозрачности посещаемости. Руководители получили инструмент для объективной оценки дисциплины подчиненных.",
+            "Для административно-кадрового отдела: Полная автоматизация отчетности по посещаемости сотрудников предприятия."
+        ]
+    })
+
+    <!-- section-cta-form -->
+    @@include('partials/section-cta-form.html')
+
+    <!-- section-contacts -->
+    @@include('partials/section-contacts.html')
+
+</main>
+
+<!-- footer -->
+@@include('partials/footer.html')

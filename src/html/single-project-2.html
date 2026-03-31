@@ -1,0 +1,122 @@
+@@include('partials/header.html', {
+    "title": "Проект Форма PRO",
+    "headerAbsolute": false
+})
+
+<!-- main -->
+<main class="main">
+
+    <!-- section-breadcrumbs -->
+    <section class="section section-breadcrumbs">
+        <div class="container">
+            <nav class="nav-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/">Главная</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span>Форма PRO</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- section-project-hero -->
+    @@include('partials/section-project-hero.html', {
+        "bannerImg": "img/project/project-item-hero-02.jpg",
+        "title": "Форма PRO",
+        "subtitle": "Приложение с контролем техники на базе компьютерного зрения",
+        "direction": "Фитнес",
+        "deadline": "6.5 месяцев",
+    })
+
+    <!-- section-project-goal-2 -->
+    @@include('partials/section-project-goal-2.html', {
+        "goalText": "Создать персонального цифрового тренера для&nbsp;повышения эффективности и&nbsp;безопасности самостоятельных тренировок. Необходимо сделать тренировки доступными для&nbsp;новичков и&nbsp;эффективными для&nbsp;каждого.",
+        "goalImg": "img/project/project-goal-02.png",
+        "aboutClient": "Сеть фитнес-клубов, которая решила запустить цифровое бизнес-направление и&nbsp;выйти на&nbsp;онлайн-аудиторию",
+        "aboutImg": "img/project/project-goal-03.png",
+    })
+
+    <!-- section-project-about-2 -->
+    @@include('partials/section-project-about-2.html', {
+        "description": "Мы&nbsp;разработали комплексное решение на&nbsp;базе мобильного приложения, объединяющее спортивные комплексы, систему контроля техники с&nbsp;помощью компьютерного зрения и&nbsp;платформу для&nbsp;удалённого курирования клиентов тренерами.",
+        "items": [
+            {
+                "title": "Провели анализ упражнений",
+                "text": "Сотрудничали с квалифицированными тренерами сети, чтобы сформировать эталонную технику упражнений и составить список распространенных ошибок. Это позволило заложить алгоритмы для контроля выполнения упражнений тренирующимися"
+            },
+            {
+                "title": "Спроектировали пользовательский путь",
+                "text": "Приложение сделали с учетом всех нюансов прохождения тренировочного комплекса человеком, упор на поддержание мотивации и удобства пользователя"
+            },
+            {
+                "title": "Разработали стабильное ядро распознавания",
+                "text": "Сфокусировались на высокоточности и надежности модуля компьютерного зрения, именно он отвечает за распознавания положения человека в пространстве"
+            }
+        ]
+    })
+
+    <!-- section-with-only-header -->
+    @@include('partials/section-with-only-header.html', {
+        "title": "Основные задачи/функции проекта",
+        "subtitle": ""
+    })
+
+    <!-- section-project-more-about-2 -->
+    @@include('partials/section-project-more-about-2.html', {
+        "bgGradient": false,
+        "textOnLeft": true,
+        "sectionImg": "img/project/project-more-04.png",
+        "title": "Контроль техники выполнения",
+        "subtitle": "С&nbsp;помощью модуля компьютерного зрения пользователь может выполнять упражнения перед&nbsp;камерой смартфона и&nbsp;видеть в&nbsp;режиме реального времени подсказки и&nbsp;замечания по&nbsp;улучшению техники."
+    })
+
+    <!-- section-project-more-about-2 -->
+    @@include('partials/section-project-more-about-2.html', {
+        "bgGradient": true,
+        "textOnLeft": false,
+        "sectionImg": "img/project/project-more-05.png",
+        "title": "Тренировочный план для&nbsp;пользователя",
+        "subtitle": "Пользователю представлен удобный календарь с&nbsp;расписанием, где&nbsp;отображаются тренировки и&nbsp;рекомендации. Для&nbsp;отслеживания состояния и&nbsp;фиксации прогресса представлены опросники и&nbsp;скрининг тестирования. Календарь помогает пользователю соблюдать режим и&nbsp;не&nbsp;забывать про&nbsp;тренировки"
+    })
+
+    <!-- section-project-more-about-2 -->
+    @@include('partials/section-project-more-about-2.html', {
+        "bgGradient": false,
+        "textOnLeft": true,
+        "sectionImg": "img/project/project-more-06.png",
+        "title": "Персональный тренер",
+        "subtitle": "Приложение позволяет пользователя закрепить за&nbsp;собой тренера. Тренер может видеть прогресс, общаться с&nbsp;подопечным и&nbsp;проводить индивидуальную корректировку его&nbsp;тренировочного плана. Функция стала каналом монетизации для&nbsp;заказчика"
+    })
+
+    <!-- section-project-more-about-2 -->
+    @@include('partials/section-project-more-about-2.html', {
+        "bgGradient": true,
+        "textOnLeft": false,
+        "sectionImg": "img/project/project-more-07.png",
+        "title": "Статистика прогресса пользователя",
+        "subtitle": "Пользователь может видеть свой тренировочный прогресс в&nbsp;виде графиков по&nbsp;разным параметрам. Сделали статистику визуально понятной и&nbsp;точной для&nbsp;пользователя."
+    })
+
+    <!-- section-project-result -->
+    @@include('partials/section-project-result.html', {
+        "icon": "img/icons/icon-result-list-2.svg",
+        "items": [
+            "Запуск нового бизнес-направления клиента",
+            "Повышение лояльности клиентов. Приложение стало ценным дополнением к абонементу, оно повышает безопасность и эффективность тренировок без необходимости оплаты персонального тренера",
+            "Расширение аудитории. Ранее клиентами были только люди из города присутствия сети, теперь приложением может воспользоваться каждый желающий вне зависимости от места проживания"
+        ]
+    })
+
+    <!-- section-cta-form -->
+    @@include('partials/section-cta-form.html')
+
+    <!-- section-contacts -->
+    @@include('partials/section-contacts.html')
+
+</main>
+
+<!-- footer -->
+@@include('partials/footer.html')

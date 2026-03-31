@@ -30,7 +30,6 @@
 [ home page ]*/
 
 /* section-home-hero */
-
 .section-home-hero {
     position: relative;
     overflow: hidden;
@@ -142,7 +141,6 @@
 }
 
 /* section-about */
-
 .section-about {
     padding: 40px 0;
     background: radial-gradient(257.31% 107.18% at 50% -14.35%, #2C2837 17.61%, rgba(44, 40, 55, 0.87) 25.02%, rgba(4, 3, 8, 0.6) 63.46%, rgba(4, 3, 8, 0.4) 100%);
@@ -161,7 +159,6 @@
 }
 
 /* section-categories */
-
 .section-categories {
     padding: 40px 0;
     background: #040308;
@@ -244,7 +241,6 @@
 }
 
 /* section-process */
-
 .section-process {
     padding: 40px 0;
     background: linear-gradient(180.83deg, #040308 0.71%, #211F2B 51.89%, #040308 98.04%);
@@ -320,7 +316,6 @@
 }
 
 /* section-price */
-
 .section-price {
     padding: 40px 0;
     background: #040308;
@@ -341,7 +336,6 @@
 }
 
 /* section-team */
-
 .section-team {
     position: relative;
     overflow: hidden;
@@ -362,7 +356,6 @@
 }
 
 /* section-faq */
-
 .section-faq {
     padding: 40px 0;
     background: #040308;
@@ -420,7 +413,6 @@
 }
 
 /* section-cta-form */
-
 .section-cta-form {
     padding: 40px 0;
     background: #040308;
@@ -478,7 +470,6 @@
 }
 
 /* section-contacts */
-
 .section-contacts {
     padding: 40px 0 128px;
     background: #040308;
@@ -538,7 +529,6 @@
 }
 
 /* section-tags */
-
 .section-tags {
     padding: 0 0 40px;
     background: #040308;
@@ -574,5 +564,23 @@
         }
 
         // .btn-show-more {}
+    }
+}
+
+/* section-projects */
+.section-projects {
+    padding: 40px 0;
+    background: #040308;
+
+    &__header {
+        margin-bottom: 24px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 80px 0;
+
+        &__header {
+            margin-bottom: 60px;
+        }
     }
 }
