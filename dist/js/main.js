@@ -28,12 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const links = document.querySelectorAll(
-        '#primaryNav a[href^="#"], #mobileNav a[href^="#"]'
+        '#primaryNav a[href*="#"], #mobileNav a[href*="#"]'
     );
 
     links.forEach(link => {
         link.addEventListener('click', e => {
-            const target = document.querySelector(link.getAttribute('href'));
+            const href = link.getAttribute('href');
+            const hash = href.includes('#') ? href.substring(href.indexOf('#')) : null;
+
+            if (!hash) return;
+
+            const target = document.querySelector(hash);
             if (!target) return;
 
             e.preventDefault();
