@@ -1,0 +1,37 @@
+@@include('partials/header.html', {
+    "title": "Проекты",
+    "headerAbsolute": false
+})
+
+<!-- main -->
+<main class="main">
+
+    <!-- section-breadcrumbs -->
+    <section class="section section-breadcrumbs">
+        <div class="container">
+            <nav class="nav-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span>Кейсы</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- section-projects -->
+    @@include('partials/section-projects.html')
+
+    <!-- section-cta-form -->
+    @@include('partials/section-cta-form.html')
+
+    <!-- section-contacts -->
+    @@include('partials/section-contacts.html')
+
+</main>
+
+<!-- footer -->
+@@include('partials/footer.html')
